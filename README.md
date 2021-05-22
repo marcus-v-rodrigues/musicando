@@ -9,10 +9,10 @@ Esse trabalho foi realizado pelos alunos:<br>
 ## Imagens do protótipo do site:
 
 #### Página principal
-<img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/homepage.png" alt="Página principal" width="200"/>
+<img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/homepage.png" alt="Página principal" width="600"/>
 
 #### Página do carrinho de compras
-<img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/chartpage.png" alt="Página Carrinho" width="200"/>
+<img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/chartpage.png" alt="Página Carrinho" width="600"/>
 
 #### Página de log in
 <img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/loginpage.png" alt="Página Log in" width="600"/>

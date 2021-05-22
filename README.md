@@ -6,13 +6,11 @@ Esse trabalho foi realizado pelos alunos:<br>
 - Isadora Carolina Siebert
 - Marcus Vinícius Santos Rodrigues
 
+## Requisitos
+Além dos requisitos padrões descritos na ementa do projeto, nosso site deve comportar a funcionalidade de reproduzir arquivos de aúdio com sons feitos pelo instrumento que o cliente está procurando. Assim, o cliente terá uma noção do timbre do instrumento antes de efetivar a compra.
+
 ## Sobre o trabalho
 A Musicando é uma loja hipotética de instrumentos musicais dos mais diversos tipos, dentre eles, teclados, guitarras, metais, percussões, etc.
-Nele o cliente poderá:
-- Navegar pelos produtos oferecidos pela loja;
-- Adicionar produtos ao carrinho de compras;
-- Avaliar produtos comprados;
-- Dentre outras funcionalidades.
 
 ## Imagens do protótipo do site:
 

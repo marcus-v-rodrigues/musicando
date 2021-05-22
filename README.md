@@ -15,6 +15,6 @@ Esse trabalho foi realizado pelos alunos:<br>
 <img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/chartpage.png" alt="Página Carrinho" width="200"/>
 
 #### Página de log in
-<img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/loginpage.png" alt="Página Log in" width="200"/>
+<img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/loginpage.png" alt="Página Log in" width="600"/>
 
 O protótipo completo com navegação entre páginas está disponível [aqui](https://www.figma.com/file/CuKYvZKoZ1MMbLktkCf9Wh/Musicando?node-id=0%3A1)

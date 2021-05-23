@@ -6,34 +6,33 @@ const Navbar = () => {
   return (
     <S.Navbar>
 
-      <S.Logo/>
+        <S.Logo/>
 
-      <S.MenuWrapper>  
+        <S.MenuWrapper>  
 
-        <S.Menu>Acessórios</S.Menu>
-        <S.Menu>Áudio</S.Menu>
-        <S.Menu>Cordas</S.Menu>
-        <S.Menu>Percussão</S.Menu>
-        <S.Menu>Teclas</S.Menu>
-        <S.Menu>Sopro</S.Menu>
-        <S.Menu>Pianos</S.Menu>
+            <S.Menu>Acessórios</S.Menu>
+            <S.Menu>Áudio</S.Menu>
+            <S.Menu>Cordas</S.Menu>
+            <S.Menu>Percussão</S.Menu>
+            <S.Menu>Teclas</S.Menu>
+            <S.Menu>Sopro</S.Menu>
+            <S.Menu>Pianos</S.Menu>
 
-      </S.MenuWrapper>
+        </S.MenuWrapper>
 
-      <S.RightWrapper>
-        
-        <S.SignWrapper>
+        <S.RightWrapper>    
 
-          <S.Sign>Cadastre-se</S.Sign>
-          <S.Sign>Entrar</S.Sign>
+            <S.SignWrapper>
+                <S.Sign>Cadastre-se</S.Sign>
+                <p>ou</p>
+                <S.Sign>Entrar</S.Sign>
+            </S.SignWrapper>
 
-        </S.SignWrapper>
+            <S.SearchForm>
+                <S.SearchBar type="text" />
+            </S.SearchForm>
 
-        
-
-      </S.RightWrapper>
-
-
+        </S.RightWrapper>
 
     </S.Navbar>
   )

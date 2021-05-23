@@ -1,21 +1,21 @@
 import { css } from 'styled-components'
 
-import BebasNeueRegular from 'fonts/Bebas_Neue/BebasNeue-Regular.ttf'
-import FredokaOneRegular from 'fonts/Fredoka_One/FredokaOne-Regular.ttf'
+import BebasNeueRegular from '../fonts/Bebas_Neue/BebasNeue-Regular.ttf'
+import FredokaOneRegular from '../fonts/Fredoka_One/FredokaOne-Regular.ttf'
 
-import RobotoThin from 'fonts/Roboto/Roboto-Thin.ttf'
-import RobotoLight from 'fonts/Roboto/Roboto-Light.ttf'
-import RobotoRegular from 'fonts/Roboto/Roboto-Regular.ttf'
-import RobotoMedium from 'fonts/Roboto/Roboto-Medium.ttf'
-import RobotoBold from 'fonts/Roboto/Roboto-Bold.ttf'
-import RobotoBlack from 'fonts/Roboto/Roboto-Black.ttf'
+import RobotoThin from '../fonts/Roboto/Roboto-Thin.ttf'
+import RobotoLight from '../fonts/Roboto/Roboto-Light.ttf'
+import RobotoRegular from '../fonts/Roboto/Roboto-Regular.ttf'
+import RobotoMedium from '../fonts/Roboto/Roboto-Medium.ttf'
+import RobotoBold from '../fonts/Roboto/Roboto-Bold.ttf'
+import RobotoBlack from '../fonts/Roboto/Roboto-Black.ttf'
 
-import RobotoThinItalic from 'fonts/Roboto/Roboto-ThinItalic.ttf'
-import RobotoLightItalic from 'fonts/Roboto/Roboto-LightItalic.ttf'
-import RobotoRegularItalic from 'fonts/Roboto/Roboto-RegularItalic.ttf'
-import RobotoMediumItalic from 'fonts/Roboto/Roboto-MediumItalic.ttf'
-import RobotoBoldItalic from 'fonts/Roboto/Roboto-BoldItalic.ttf'
-import RobotoBlackItalic from 'fonts/Roboto/Roboto-BlackItalic.ttf'
+import RobotoThinItalic from '../fonts/Roboto/Roboto-ThinItalic.ttf'
+import RobotoLightItalic from '../fonts/Roboto/Roboto-LightItalic.ttf'
+import RobotoRegularItalic from '../fonts/Roboto/Roboto-RegularItalic.ttf'
+import RobotoMediumItalic from '../fonts/Roboto/Roboto-MediumItalic.ttf'
+import RobotoBoldItalic from '../fonts/Roboto/Roboto-BoldItalic.ttf'
+import RobotoBlackItalic from '../fonts/Roboto/Roboto-BlackItalic.ttf'
 
 
 const BebasNeueNormalWeights = {

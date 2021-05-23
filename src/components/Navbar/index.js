@@ -24,12 +24,12 @@ const Navbar = () => {
 
             <S.SignWrapper>
                 <S.Sign>Cadastre-se</S.Sign>
+                <p>ou</p>
                 <S.Sign>Entrar</S.Sign>
             </S.SignWrapper>
 
             <S.SearchForm>
                 <S.SearchBar type="text" />
-                <S.SearchButton/>
             </S.SearchForm>
 
         </S.RightWrapper>

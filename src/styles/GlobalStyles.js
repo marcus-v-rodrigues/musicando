@@ -1,18 +1,16 @@
 import { createGlobalStyle } from "styled-components"
 
-import Fonts from './fonts'
-
 const GlobalStyles = createGlobalStyle`
 
     :root {
-        --navbar-height: 148px;
-        --blue: #13294B;
-        --light-blue: #1D3F74;
-        --lighter-blue: #2E64B7;
-        --orange: #C98A0A;
+        --navbar-height: 150px;
+        --light-brown: #8d6852;
+        --dark-brown: #462e25;
     }
 
-    ${Fonts}
+    * {
+        @import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Fredoka+One|Roboto');
+    }
 
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,49 +25,49 @@ const GlobalStyles = createGlobalStyle`
     figure, figcaption, footer, header, hgroup,
     menu, nav, output, ruby, section, summary,
     time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    font-family: 'Roboto', sans-serif;
-    vertical-align: baseline;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        font-family: 'Roboto', sans-serif;
+        vertical-align: baseline;
     }
     /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure,
     footer, header, hgroup, menu, nav, section {
-    display: block;
+        display: block;
     }
     body {
-    line-height: 1;
+        line-height: 1;
     }
     ol, ul {
-    list-style: none;
+        list-style: none;
     }
     blockquote, q {
-    quotes: none;
+        quotes: none;
     }
     blockquote:before, blockquote:after,
     q:before, q:after {
-    content: '';
-    content: none;
+        content: '';
+        content: none;
     }
     table {
-    border-collapse: collapse;
-    border-spacing: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
     }
     * {
-    box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     body {
-    line-height: 1;
-    font-size: 100%;
+        line-height: 1;
+        font-size: 100%;
     }
     img {
-    display: block;
-    width: 100%;
-    height: auto;
+        display: block;
+        width: 100%;
+        height: auto;
     }
 `
 export default GlobalStyles

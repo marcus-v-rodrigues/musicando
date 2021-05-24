@@ -24,10 +24,29 @@ export const Upper = styled.div`
     background: #ECECEC;
 
 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+`
+
+export const Column = styled.div`
+    position:relative;
+    width: 100%;
+    height: 75%;
+    background: #ECECEC;
+    margin: 3em 0 0 2em;
+
+
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+`
+export const Item = styled.span`
+    margin: 0.2em;
+`
+export const Title = styled(Item)`
+    font-weight: 600;
+    font-size: 1.5em;
 `
 export const Bottom = styled.div`
     position:relative;
@@ -44,7 +63,8 @@ export const Bottom = styled.div`
 export const Image = styled.span`
     width: 5em;
     height: 3em;
-    background-size: cover;
+    margin: 1em;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;   
 `
@@ -70,6 +90,13 @@ export const Pix = styled(Image)`
     background-image: url(${pix});
 `
 
+export const Payment = styled.div`
+    position: absolute;
+    bottom: 1em;
+    left: 2em;  
+    display: flex;
+    align-items: center;
+`
 
 export const Description = styled.div`
     position: absolute;

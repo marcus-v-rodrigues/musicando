@@ -57,7 +57,7 @@ export const Menu = styled.a`
     transition: background 0.5s ease-in-out;
 
     &:hover{
-        background: black;
+        background: var(--light-brown);
         color: white;
     }
 `
@@ -117,8 +117,8 @@ export const SearchForm = styled.form`
 
     &:after{
         position: absolute;
-        top: 45px;
-        right: 3px;
+        top: 37px;
+        right: 0px;
         content: "";
         background: black;
         width: 4px;
@@ -131,10 +131,11 @@ export const SearchBar = styled.input`
     right: 0;
 
     overflow: hidden;
-    width:  4em;
-    height: 4em;
+    width:  3.5em;
+    height: 3.5em;
     padding: 1em;
 
+    cursor: pointer;
     color: black;
     background: transparent;
     outline: none;

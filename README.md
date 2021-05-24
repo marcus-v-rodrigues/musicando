@@ -6,6 +6,12 @@ Esse trabalho foi realizado pelos alunos:<br>
 - Isadora Carolina Siebert
 - Marcus Vinícius Santos Rodrigues
 
+## Requisitos
+Além dos requisitos padrões descritos na ementa do projeto, nosso site deve comportar a funcionalidade de reproduzir arquivos de aúdio com sons feitos pelo instrumento que o cliente está procurando. Assim, o cliente terá uma noção do timbre do instrumento antes de efetivar a compra.
+
+## Sobre o trabalho
+A Musicando é uma loja hipotética de instrumentos musicais dos mais diversos tipos, dentre eles, teclados, guitarras, metais, percussões, etc.
+
 ## Imagens do protótipo do site:
 
 #### Página principal
@@ -17,4 +23,8 @@ Esse trabalho foi realizado pelos alunos:<br>
 #### Página de log in
 <img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/loginpage.png" alt="Página Log in" width="600"/>
 
+#### Diagrama de navegação
 O protótipo completo com navegação entre páginas está disponível [aqui](https://www.figma.com/file/CuKYvZKoZ1MMbLktkCf9Wh/Musicando?node-id=0%3A1)
+
+## Como executar a aplicação:
+...

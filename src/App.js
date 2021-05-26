@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom' //React library 
 
 import Layout from './components/Layout' //General component with Navbar and Footer
 
+import './styles/App.css' //import fonts
+
 //Pages
 import Main from './pages/Main'
 import Login from './pages/Login'

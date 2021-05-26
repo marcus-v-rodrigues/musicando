@@ -33,7 +33,7 @@ export const Column = styled.div`
     width: 100%;
     height: 75%;
     background: #ECECEC;
-    margin: 3em 0 0 2em;
+    padding: 3em 0 0 2em;
 
 
     display: flex;

@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { NavLink } from 'react-router-dom'
+
 
 import logo from './Musicando.svg';
 
@@ -82,7 +84,7 @@ export const SignWrapper = styled.div`
     height: 100%;
 `
 
-export const Sign = styled.a`
+export const Sign = styled(NavLink)`
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -101,6 +103,7 @@ export const Sign = styled.a`
     text-transform: uppercase;
     font-family: 'Bebas Neue';
     font-size: 1.5em; 
+    text-decoration: none;
 
     transition: background 0.5s ease-in-out;
 

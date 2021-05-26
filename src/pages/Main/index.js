@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Hero from './sections/Hero'
 import Releases from './sections/Releases'
 import Spotlight from './sections/Spotlight'

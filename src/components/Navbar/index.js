@@ -23,9 +23,9 @@ const Navbar = () => {
         <S.RightWrapper>    
 
             <S.SignWrapper>
-                <S.Sign>Cadastre-se</S.Sign>
+                <S.Sign to={'/login'} >Cadastre-se</S.Sign>
                 <p>ou</p>
-                <S.Sign>Entrar</S.Sign>
+                <S.Sign to={'/login'} >Entrar</S.Sign>
             </S.SignWrapper>
 
             <S.SearchForm>

@@ -24,7 +24,7 @@ A Musicando é uma loja hipotética de instrumentos musicais dos mais diversos t
 <img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/loginpage.png" alt="Página Log in" width="600"/>
 
 #### Diagrama de navegação
-<img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/navigation_diagram.png" alt="Página Log in" width="600" style = "background-color: white"/>
+<img src="https://raw.githubusercontent.com/Idalen/musicando/master/prototype/navigation_diagram.png" alt="Página Log in" width="600"/>
 
 
 O protótipo completo com navegação entre páginas está disponível [aqui](https://www.figma.com/file/CuKYvZKoZ1MMbLktkCf9Wh/Musicando?node-id=0%3A1)

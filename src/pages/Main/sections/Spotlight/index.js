@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from "./styled"
-import {ProductWrapper, ProductItem} from '../../components/Product' 
+import {ProductWrapper, ProductItem} from 'components/Product' 
 
 const items = [
   {

@@ -1,21 +1,18 @@
-import GlobalStyles from './styles/GlobalStyles'
-import Navbar from './components/Navbar'
-import Hero from './sections/Hero'
-import Releases from './sections/Releases'
-import Spotlight from './sections/Spotlight'
-import Image from './components/Image'
-import Footer from './components/Footer'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
+import Layout from './components/Layout'
+import Main from './pages/Main'
 
 const App = () => {
   return (
     <>
-      <GlobalStyles/>
-      <Navbar/>
-      <Hero/>
-      <Releases/>
-      <Image photo={1}/>
-      <Spotlight/>
-      <Footer/>
+        <BrowserRouter>
+            <Layout>
+                <Switch>
+                    <Route exact path="/" component={ Main } />
+                </Switch>
+            </Layout>
+        </BrowserRouter>
     </>
   )
 }

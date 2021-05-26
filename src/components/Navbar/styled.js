@@ -1,8 +1,7 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-
-import logo from './Musicando.svg';
+import logo from './images/Musicando.svg'
 
 export const Navbar = styled.nav`
     position:relative;
@@ -21,7 +20,7 @@ export const Navbar = styled.nav`
                 rgba(0, 0, 0, 0.2) 0px 15px 10px 15px;
     /*color | offset-x | offset-y | blur-radius | spread-radius*/
 `
-export const Logo = styled.div`
+export const Logo = styled.a`
     position: relative;
     background-image: url(${logo});
     background-position: center; 

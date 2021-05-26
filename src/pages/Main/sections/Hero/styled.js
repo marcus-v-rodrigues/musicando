@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import background from './LesPaul.jpg'
+import background from './images/LesPaul.jpg'
 
 export const Hero = styled.section`
     position: relative;

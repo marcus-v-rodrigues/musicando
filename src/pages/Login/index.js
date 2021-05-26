@@ -1,11 +1,11 @@
 import React from 'react'
 
-import * as S from './styled'
+import Form from './sections/Form'
 
 const Login = () => {
   return (
     <>
-
+        <Form/>
     </>
   )
 }

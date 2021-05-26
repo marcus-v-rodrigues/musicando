@@ -6,10 +6,9 @@ const Navbar = () => {
   return (
     <S.Navbar>
 
-        <S.Logo/>
+        <S.Logo href={'/'}/>
 
         <S.MenuWrapper>  
-
             <S.Menu>Acessórios</S.Menu>
             <S.Menu>Áudio</S.Menu>
             <S.Menu>Cordas</S.Menu>
@@ -17,7 +16,6 @@ const Navbar = () => {
             <S.Menu>Teclas</S.Menu>
             <S.Menu>Sopro</S.Menu>
             <S.Menu>Pianos</S.Menu>
-
         </S.MenuWrapper>
 
         <S.RightWrapper>    

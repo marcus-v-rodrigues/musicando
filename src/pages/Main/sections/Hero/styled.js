@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 import background from './images/LesPaul.jpg'
 
@@ -28,7 +29,7 @@ export const Title = styled.h1`
     font-family: 'Fredoka One';
 `
 
-export const Button = styled.a`
+export const Button = styled(NavLink)`
     cursor: pointer;
     background: var(--light-brown);
 
@@ -40,6 +41,7 @@ export const Button = styled.a`
     width: fit-content;
 
     color: white;
+    text-decoration: none;
     text-transform: uppercase; 
     font-family: 'Bebas Neue';
     font-size: 3rem;

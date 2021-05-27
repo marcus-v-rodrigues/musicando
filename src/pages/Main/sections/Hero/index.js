@@ -8,7 +8,7 @@ const Hero = () => {
     <S.Hero>
         <S.WrapperAction>
             <S.Title>Guitarra Les Paul</S.Title>
-            <S.Button>Comprar Agora ❯</S.Button>
+            <S.Button to='/cart'>Comprar Agora ❯</S.Button>
         </S.WrapperAction>
     </S.Hero>
   )

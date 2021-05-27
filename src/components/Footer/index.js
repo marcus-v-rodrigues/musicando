@@ -1,3 +1,5 @@
+//Component responsible for the Footer
+
 import React from 'react'
 import * as S from "./styled"
 

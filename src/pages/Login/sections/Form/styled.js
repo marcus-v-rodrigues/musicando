@@ -1,3 +1,5 @@
+//Style file
+
 import styled from 'styled-components'
 
 import microphone from './images/microphone.jpg'

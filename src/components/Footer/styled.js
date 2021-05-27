@@ -1,3 +1,5 @@
+//Style file
+
 import styled from 'styled-components'
 
 import brazil from './images/brazil.png'

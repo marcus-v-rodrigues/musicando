@@ -1,6 +1,11 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+//Main project file 
+//What is here is what is built
 
-import Layout from './components/Layout'
+import { BrowserRouter, Route, Switch } from 'react-router-dom' //React library to have multiple pages
+
+import Layout from './components/Layout' //General component with Navbar and Footer
+
+//Pages
 import Main from './pages/Main'
 import Login from './pages/Login'
 import Cart from './pages/Cart'

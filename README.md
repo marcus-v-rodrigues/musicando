@@ -30,4 +30,41 @@ A Musicando é uma loja hipotética de instrumentos musicais dos mais diversos t
 O protótipo completo com navegação entre páginas está disponível [aqui](https://www.figma.com/file/CuKYvZKoZ1MMbLktkCf9Wh/Musicando?node-id=0%3A1)
 
 ## Como executar a aplicação:
-...
+
+> **Clone o Repósitorio em sua máquina:**
+
+```bash
+git clone  https://github.com/marcus-v-rodrigues/musicando.git
+```
+
+> **Navegue para o diretório que foi baixado:**
+
+```bash
+cd musicando
+```
+
+> **Instale as Dependências:**
+
+```bash
+npm install
+```
+_ou_
+
+```bash
+yarn install
+```
+> **Inicie a aplicação:**
+
+```bash
+npm start
+```
+_ou_
+
+```bash
+yarn run start
+```
+**A aplicação irá iniciar em seu navegador, por padrão estará em:**
+
+http://localhost:3000/
+
+**Caso não estaja na porta 3000 confira no terminal que iniciou a aplicação para ver o caminho que está definido**

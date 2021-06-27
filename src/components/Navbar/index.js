@@ -19,17 +19,9 @@ const Navbar = () => {
         </S.MenuWrapper>
 
         <S.RightWrapper>    
-
-            <S.SignWrapper>
-                <S.Sign to={'/login'} >Cadastre-se</S.Sign>
-                <p>ou</p>
-                <S.Sign to={'/login'} >Entrar</S.Sign>
-            </S.SignWrapper>
-
-            <S.SearchForm>
-                <S.SearchBar type="text" />
-            </S.SearchForm>
-
+            <S.Sign to={'/login'} >Cadastre-se</S.Sign>
+            <p>ou</p>
+            <S.Sign to={'/login'} >Entrar</S.Sign>
         </S.RightWrapper>
 
     </S.Navbar>

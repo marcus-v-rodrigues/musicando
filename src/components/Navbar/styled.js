@@ -30,6 +30,7 @@ export const Logo = styled.a`
     background-repeat: no-repeat;
     height: 80%;
     width: 20%;
+    min-width: 12em;
     margin: 0 3em;
 `
 export const MenuWrapper = styled.div`
@@ -55,7 +56,7 @@ export const Menu = styled.a`
     text-transform: uppercase; 
 
     font-family: 'Bebas Neue';
-    font-size: 2rem;
+    font-size: 2em;
     
     transition: background 0.5s ease-in-out;
 
@@ -63,26 +64,38 @@ export const Menu = styled.a`
         background: var(--light-brown);
         color: white;
     }
+
+    @media screen and (max-width: 1600px){
+        font-size: 1.7em;
+    }
+
+    @media screen and (max-width: 1400px){
+        font-size: 1.5em;
+    }
+
+    @media screen and (max-width: 1300px){
+        display: none;
+    }
 `
 
 export const RightWrapper = styled.div`
     position: relative;
-    display: grid;
-    grid: 1fr 1fr / 1fr;
-    row-gap: 0.5em;
-    width: 25%;
-    height: 80%;
-    margin: 1em 1em 1em 5em;
-`
-
-export const SignWrapper = styled.div`
-    position: relative;
     display: flex;
-    flex-grow: 1;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    width: 25%;
     height: 100%;
+    margin: 1em 2em 1em 3em;
+
+    @media screen and (max-width: 1400px){
+        width: 20%;
+    }
+
+    @media screen and (max-width: 1300px){
+        display: none;
+    }
 `
 
 export const Sign = styled(NavLink)`
@@ -97,7 +110,7 @@ export const Sign = styled(NavLink)`
     border: 3px solid var(--light-brown);
     border-radius: 0.5em;
 
-    height: 100%;
+    height: 40%;
     width: 40%;
 
     color: white;
@@ -112,8 +125,12 @@ export const Sign = styled(NavLink)`
         background: white;
         color: var(--light-brown);
     }
-`
 
+    @media screen and (max-width: 1400px){
+        font-size: 1.2em; 
+    }
+`
+/*
 export const SearchForm = styled.form`
     display: flex;
     width: 100%;
@@ -152,3 +169,4 @@ export const SearchBar = styled.input`
     }
 
 `
+*/

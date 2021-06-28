@@ -36,7 +36,7 @@ const products = [
     },
     {
         id: 6,
-        image:'/images/products/contra-baixo.png',
+        image:'/images/products/contra_baixo.png',
         name: 'Contra Baixo Jazz Bass 4 Cordas JB CS(Cherry Sunburst) PHX - Sunburst (Cherry Sunburst) (CS)',
         price: '1279.00',
         category: 'Cordas'

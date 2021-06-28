@@ -7,9 +7,12 @@ export const Container = styled.section`
     justify-content: center;
     align-items:center;
 
-    height: calc(100vh - var(--navbar-height));
-    min-height: 50em;
+    min-height: calc(100vh - var(--navbar-height));
     width: 100%;
 
     background: linear-gradient(to right bottom, var(--light-brown), var(--dark-brown));
+
+    @media screen and (max-height: 1000px){
+        min-height: 50em;
+    }
 `

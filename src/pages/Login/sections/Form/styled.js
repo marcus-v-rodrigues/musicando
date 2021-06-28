@@ -4,19 +4,6 @@ import styled from 'styled-components'
 
 import microphone from './images/microphone.jpg'
 
-export const Container = styled.section`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-
-    height: calc(100vh - var(--navbar-height));
-    width: 100%;
-
-    background: linear-gradient(to right bottom, var(--light-brown), var(--dark-brown));
-`
-
 export const Title = styled.h1`
     margin: 0 0 0.5em 0;
     color: white;

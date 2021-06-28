@@ -3,26 +3,33 @@ import { NavLink } from 'react-router-dom'
 
 export const Wrapper = styled.div`
   position: absolute;
-  right: 1em;
-  top: 1em;
-  margin: 1.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
 export const Sidebar = styled.div`
+  --long-distance: -3em;
+  --short-distance: -1em;
+  --width: 20em;
+
   position: absolute;
-  top: -2.5em;
-  right: -2.5em;
-  width: 20em;
+  top: var(--long-distance);
+  right: var(--long-distance);
+  width: var(--width);
   background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
   box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.15); 
   backdrop-filter: blur(2em);
   border-radius: 2em 0 0 2em;
   padding: 2em;
   z-index:3;
-  clip-path: circle(0 at 16.3em 3.7em);
+  clip-path: circle(0 at calc(var(--width) + calc(var(--long-distance) * 2)) calc(var(--long-distance) * -1));
+
+  @media screen and (max-width: 800px){
+    top: var(--short-distance);
+    right: var(--short-distance);
+    clip-path: circle(0 at calc(var(--width) + calc(var(--short-distance) * 2.5)) calc(var(--short-distance) * -3));
+  }
 `
 
 export const Description = styled.p`

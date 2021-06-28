@@ -12,6 +12,9 @@ const GlobalStyles = createGlobalStyle`
         }
     }
 
+    
+    // * { outline: 1px solid #f00 !important; } //Test to verify which component is causing a horizontal overflow
+
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, button, cite, code,

@@ -1,10 +1,10 @@
 import React from 'react'
-
+import PageContainer from '../../components/Layout/PageContainer'
 import * as S from './styled'
 
 const Cart = () => {
   return (
-    <S.Container>
+    <PageContainer>
         <S.Title>Carrinho</S.Title>
         <S.CartWrapper>
             <S.ProductList>
@@ -31,7 +31,7 @@ const Cart = () => {
             </S.ProductList>
             <S.Button>Comprar</S.Button>
         </S.CartWrapper>
-    </S.Container>
+    </PageContainer>
   )
 }
 

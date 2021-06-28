@@ -1,10 +1,11 @@
 import React from 'react'
+import PageContainer from '../../../../components/Layout/PageContainer'
 
 import * as S from './styled'
 
 const Form = () => {
   return (
-    <S.Container>
+    <PageContainer>
         <S.Title>Login</S.Title>
         <S.FormBackground>
             <S.FormWrapper>
@@ -35,7 +36,7 @@ const Form = () => {
 
             </S.FormWrapper>
         </S.FormBackground>
-    </S.Container>
+    </PageContainer>
   )
 }
 

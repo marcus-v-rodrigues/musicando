@@ -66,6 +66,8 @@ export const Payment = styled.div`
     grid-row: 2;
     grid-column: 1 / 5;
 
+    max-width: 20em;
+
     @media screen and (max-width: 700px){
         width: 80%;
         grid: repeat(2, 1fr) / repeat(3, 1fr);

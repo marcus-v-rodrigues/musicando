@@ -16,6 +16,7 @@ export const FormBackground = styled.div`
 	position:relative;
     width:100%;
     max-width: 30em;
+    min-width: 20em;
 	min-height: 40em;
 	
 	background:url(${microphone}) no-repeat center/cover;

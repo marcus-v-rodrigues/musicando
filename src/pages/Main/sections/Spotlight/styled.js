@@ -17,6 +17,7 @@ export const Spotlight = styled.section`
 
 export const Wrapper = styled.div`
     position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
 
-    @media screen and (max-width: 1500px){
+    @media screen and (max-width: 1600px){
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }

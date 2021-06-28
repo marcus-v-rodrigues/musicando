@@ -51,9 +51,12 @@ const Footer = () => {
             <S.Bottom>
                 <S.Brazil/>
                 <S.Description>
-                    Musicando LTDA - CNPJ/MF nº 03.266.470/0001-90 Inscrição Estadual 559.206.931.274<br/>
-                    Endereço: Rua Santa Quitéria, Santa Mônica - Galpão 1 - Camaragibe/PE, CEP 54767-260<br/>
-                    Atendimento ao cliente: atendimentoaocliente@musicando.com | 0800 5698 1234
+                    <p>Musicando LTDA - CNPJ/MF nº 03.266.470/0001-90</p> 
+                    <p>Inscrição Estadual: 559.206.931.274</p>
+                    <p>Endereço: Rua Santa Quitéria, Santa Mônica - Galpão 1 - Camaragibe/PE</p>
+                    <p>CEP: 54767-260</p>
+                    <p>Atendimento ao cliente: atendimentoaocliente@musicando.com</p>
+                    <p>0800 5698 1234</p>
                 </S.Description>
             </S.Bottom>
         </S.Footer>

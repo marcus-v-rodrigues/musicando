@@ -15,19 +15,30 @@ export const Hero = styled.section`
 
     background-image: url(${background});
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;   
 `
 
 export const WrapperAction = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 5rem;
+    margin-left: 5em;
+
+    @media screen and (max-width: 1000px){
+            font-size: 0.6em;
+    }
+
+    @media screen and (max-width: 600px){
+            font-size: 0.4em;
+    }
 `
 
 export const Title = styled.h1`
     margin: 0 0 0.2em 0;
     color: white;
     text-transform: uppercase; 
-    font-size: 4rem;
+    font-size: 4em;
     font-family: 'Fredoka One';
 `
 
@@ -46,7 +57,7 @@ export const Button = styled(NavLink)`
     text-decoration: none;
     text-transform: uppercase; 
     font-family: 'Bebas Neue';
-    font-size: 3rem;
+    font-size: 3em;
 
     transition: background 0.5s ease-in-out, border 0.5s ease-in-out;
 

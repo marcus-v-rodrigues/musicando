@@ -29,9 +29,16 @@ export const Logo = styled.a`
     background-size: contain;
     background-repeat: no-repeat;
     height: 80%;
-    width: 20%;
     min-width: 12em;
     margin: 0 3em;
+
+    @media screen and (max-width: 700px){
+        margin: 0 1em;
+    }
+
+    @media screen and (max-width: 500px){
+        font-size: 0.6em;
+    }
 `
 export const MenuWrapper = styled.div`
     position: relative;

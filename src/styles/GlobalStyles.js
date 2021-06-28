@@ -6,6 +6,10 @@ const GlobalStyles = createGlobalStyle`
         --navbar-height: 150px;
         --light-brown: #8d6852;
         --dark-brown: #462e25;
+
+        @media screen and (max-width: 800px){
+            --navbar-height: 100px;
+        }
     }
 
     html, body, div, span, applet, object, iframe,

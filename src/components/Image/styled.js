@@ -6,6 +6,7 @@ export const Image = styled.div`
     background-image: url(${props => props.image});
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center center;     
 
     height: 80vh;

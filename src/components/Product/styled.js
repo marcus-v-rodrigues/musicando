@@ -5,6 +5,20 @@ import styled from "styled-components"
 export const Wrapper = styled.div`
     position: relative;
     display: flex;
+
+    @media screen and (max-width: 1500px){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 1200px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 800px){
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 `
 export const Item = styled.div`
     position: relative;

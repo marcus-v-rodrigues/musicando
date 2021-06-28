@@ -11,6 +11,7 @@ export const Hero = styled.section`
     align-items: center;
 
     height: calc(100vh - var(--navbar-height));
+    min-height: 40em;
     width: 100%;
 
     background-image: url(${background});

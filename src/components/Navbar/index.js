@@ -9,13 +9,13 @@ const Navbar = () => {
         <S.Logo href={'/'}/>
 
         <S.MenuWrapper>  
-            <S.Menu>Acessórios</S.Menu>
-            <S.Menu>Áudio</S.Menu>
-            <S.Menu>Cordas</S.Menu>
-            <S.Menu>Percussão</S.Menu>
-            <S.Menu>Teclas</S.Menu>
-            <S.Menu>Sopro</S.Menu>
-            <S.Menu>Pianos</S.Menu>
+            <S.MenuButton>Acessórios</S.MenuButton>
+            <S.MenuButton>Áudio</S.MenuButton>
+            <S.MenuButton>Cordas</S.MenuButton>
+            <S.MenuButton>Percussão</S.MenuButton>
+            <S.MenuButton>Teclas</S.MenuButton>
+            <S.MenuButton>Sopro</S.MenuButton>
+            <S.MenuButton>Pianos</S.MenuButton>
         </S.MenuWrapper>
 
         <S.RightWrapper>    
@@ -23,6 +23,8 @@ const Navbar = () => {
             <p>ou</p>
             <S.Sign to={'/login'} >Entrar</S.Sign>
         </S.RightWrapper>
+
+        <S.Menu/>
 
     </S.Navbar>
   )

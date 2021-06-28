@@ -2,6 +2,7 @@
 
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
+import HamburgerMenu from './HamburgerMenu'
 
 import logo from './images/Musicando.svg'
 
@@ -49,7 +50,7 @@ export const MenuWrapper = styled.div`
     height: 100%;
     flex-grow: 1;
 `
-export const Menu = styled.a`
+export const MenuButton = styled.a`
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -136,6 +137,15 @@ export const Sign = styled(NavLink)`
     @media screen and (max-width: 1400px){
         font-size: 1.2em; 
     }
+`
+
+export const Menu = styled(HamburgerMenu)`
+    display: none;
+
+    @media screen and (max-width: 1300px){
+        display: flex;
+    }
+
 `
 /*
 export const SearchForm = styled.form`

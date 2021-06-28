@@ -11,6 +11,7 @@ import './styles/App.css' //import fonts
 import Main from './pages/Main'
 import Login from './pages/Login'
 import Cart from './pages/Cart'
+import ProductDetails from './pages/ProductDetails'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
                     <Route exact path="/" component={ Main } />
                     <Route path="/login" component={ Login } />
                     <Route path="/cart" component={ Cart } />
+                    <Route path="/product:id" component={ ProductDetails } />
                 </Switch>
             </Layout>
         </BrowserRouter>

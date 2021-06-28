@@ -141,9 +141,18 @@ export const Sign = styled(NavLink)`
 
 export const Menu = styled(HamburgerMenu)`
     display: none;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    margin: 1.5em;
 
     @media screen and (max-width: 1300px){
         display: flex;
+    }
+
+    @media screen and (max-width: 800px){
+        right: 0.1em;
+        top: 0.1em;
     }
 
 `

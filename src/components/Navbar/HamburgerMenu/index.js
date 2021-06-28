@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import * as S from './styled'
 import links from './links'
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ className }) => {
     
     let sidebar = useRef(null)
     let lineOne = useRef(null)
@@ -68,7 +68,7 @@ const HamburgerMenu = () => {
     },[menuExpanded])   
 
     return (
-        <S.Wrapper>
+        <S.Wrapper className={className}> {/*Using styled(Component) creates a class which is passed as a prop called className to the wrapped component.*/}
             <S.ToggleBtn onClick={() => setMenuExpanded(!menuExpanded)}>
                 <S.Top ref={lineOne}></S.Top>
                 <S.Middle ref={lineTwo}></S.Middle>

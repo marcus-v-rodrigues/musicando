@@ -17,8 +17,8 @@ const ProductItem = ({image, name, price}) => {
           <S.ItemBackground>
               <S.ItemImage image={image}/>
           </S.ItemBackground>
-          <S.ItemText>{name}</S.ItemText>
-          <S.ItemText>{price}</S.ItemText>
+          <S.ItemName>{name}</S.ItemName>
+          <S.ItemPrice>R$ {price}</S.ItemPrice>
       </S.Item>
     )
   }

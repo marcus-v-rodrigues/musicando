@@ -12,7 +12,7 @@ export const Container = styled.section`
 
     background: linear-gradient(to right bottom, var(--light-brown), var(--dark-brown));
 
-    @media screen and (max-height: 1000px){
+    @media screen and (max-height: 700px){
         min-height: 50em;
     }
 `

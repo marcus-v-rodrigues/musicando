@@ -25,7 +25,7 @@ const products = [
         image:'/images/products/cavaco.png',
         name: 'Cavaco Elétrico Estudante RC10 ELF Rozini - Natural (Satin Natural) (SN)',
         price: '899.00',
-        category: 'Áudio'
+        category: 'Cordas'
     },
     {
         id: 5,

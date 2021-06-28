@@ -13,7 +13,7 @@ const Category = ({ category }) => {
             <S.Wrapper>
                 <ProductWrapper>
                     {products.map(product => (
-                        product.category == category &&
+                        product.category === category &&
                         <ProductItem 
                             key={product.id} 
                             image={product.image} 

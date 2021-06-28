@@ -23,7 +23,7 @@ const App = () => {
                     <Route exact path="/" component={ Main } />
                     <Route path="/login" component={ Login } />
                     <Route path="/cart" component={ Cart } />
-                    <Route path="/product:id" component={ ProductDetails } />
+                    <Route path="/product/:id" component={ ProductDetails } />
                     
                     <Route path="/accessory" render={() => (<Category category={'Acessórios'} />)} />
                     <Route path="/audio" render={() => (<Category category={'Áudio'} />)} />

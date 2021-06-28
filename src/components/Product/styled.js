@@ -5,6 +5,7 @@ import styled from "styled-components"
 export const Wrapper = styled.div`
     position: relative;
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(4, 1fr);
     width: 100%;
 
@@ -23,6 +24,7 @@ export const Item = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 2em;
 `
 
@@ -46,7 +48,15 @@ export const ItemImage = styled.div`
     width: 100%;
 `
 
-export const ItemText = styled.p`
+export const ItemName = styled.p`
     color: black;
-    font-size: 1.5em;
+    font-size: 1em;
+    text-align: center;
+    height: 3em;
+
+`
+export const ItemPrice = styled.p`
+    color: black;
+    font-size: 2em;
+    align-self: flex-start;
 `

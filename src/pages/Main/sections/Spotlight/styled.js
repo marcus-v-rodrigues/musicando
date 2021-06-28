@@ -9,7 +9,7 @@ export const Spotlight = styled.section`
     justify-content: center;
     align-items: center;
 
-    height: 70vh;
+    padding: 3em 0;
     width: 100%;
 
     color: white;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 `
 
 export const Title = styled.p`
@@ -28,5 +28,5 @@ export const Title = styled.p`
     font-size: 4rem;
     font-family: 'Fredoka One';
     color: black;
-    margin: 0 0 1rem 2rem;    
+    margin-bottom: 1em;    
 `   

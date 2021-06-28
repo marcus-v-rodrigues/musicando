@@ -5,6 +5,7 @@ import styled from "styled-components"
 export const Wrapper = styled.div`
     position: relative;
     display: flex;
+    justify-content: space-between;
 
     @media screen and (max-width: 1500px){
         display: grid;

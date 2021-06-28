@@ -9,7 +9,18 @@ const ProductDetails = ({ match }) => {
     return (
         <PageContainer>
             <S.Wrapper>
-                {product.name}
+                <S.Content>
+
+                <S.Background>
+                    <S.Image image={product.image}/>
+                </S.Background>
+
+                <S.Text>
+                    <S.ProductName>{product.name}</S.ProductName>
+                    <S.ProductPrice>R$ {product.price}</S.ProductPrice>
+                </S.Text>
+
+                </S.Content>
             </S.Wrapper>
         </PageContainer>
     )

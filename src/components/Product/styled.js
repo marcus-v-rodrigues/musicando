@@ -57,6 +57,7 @@ export const ItemImage = styled.div`
 
 export const ItemName = styled.div`
     color: black;
+    margin-top: 1em;
     font-size: 1em;
     text-align: center;
     word-break: break-word;
@@ -65,6 +66,6 @@ export const ItemName = styled.div`
 `
 export const ItemPrice = styled.span`
     color: black;
-    margin-top: 1em;
+    margin-top: 0.5em;
     font-size: 2em;
 `

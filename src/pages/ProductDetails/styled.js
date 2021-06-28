@@ -21,3 +21,62 @@ export const Wrapper = styled.div`
         padding: 1em 0;
     }
 ` 
+
+export const Content = styled.div`
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+
+    @media only screen and (max-width: 900px) {
+        justify-items: center;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+    }
+`
+
+export const Background = styled.div`
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    height: 20em;
+    width: 20em;
+    background: #ECECEC;
+`
+
+export const Image = styled.div`
+    background-image: url(${props => props.image});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;     
+
+    height: 100%;
+    width: 100%;
+`
+
+export const Text = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    width: 100%;
+
+    @media only screen and (max-width: 900px) {
+        text-align: center;
+    }
+`
+
+export const ProductName = styled.div`
+    color: black;
+    margin-top: 1em;
+    font-size: 2em;
+    word-break: break-word;
+    width: 100%;
+
+`
+export const ProductPrice = styled.span`
+    color: black;
+    margin-top: 0.5em;
+    font-size: 4em;
+`

@@ -4,6 +4,8 @@ import Hero from './sections/Hero'
 import Spotlight from './sections/Spotlight'
 import Image from '../../components/Image'
 
+import products from '../../data/products'
+
 const Novidades = [
   {
     id: 1,
@@ -59,12 +61,18 @@ const Destaques = [
 ]
 
 const Main = () => {
+  const isNew = product => product.id >= 19
+  const novidades = products.filter(isNew)
+
+  const isGood = product => product.category == 'Cordas'
+  const destaques = products.filter(isGood)
+
   return (
     <>
       <Hero/>
-      <Spotlight title={'Novidades'} items={Novidades}/>
+      <Spotlight title={'Novidades'} items={novidades}/>
       <Image photo={1}/>
-      <Spotlight title={'Destaques'} items={Destaques}/>
+      <Spotlight title={'Destaques'} items={destaques}/>
     </>
   )
 }

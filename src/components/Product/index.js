@@ -10,10 +10,10 @@ const ProductWrapper = ({children}) => {
   )
 }
 
-const ProductItem = ({image, name, price}) => {
+const ProductItem = ({id, image, name, price}) => {
 
     return (
-      <S.Item>
+      <S.Item to={`product/${id}`}>
           <S.ItemBackground>
               <S.ItemImage image={image}/>
           </S.ItemBackground>

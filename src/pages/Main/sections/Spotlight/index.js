@@ -5,19 +5,18 @@ import {ProductWrapper, ProductItem} from 'components/Product'
 const Spotlight = ({items, title}) => {
     return (
         <S.Spotlight>
-            <S.Wrapper>
                 <S.Title>{title}</S.Title>
                 <ProductWrapper>
                     {items.map(item => (
                         <ProductItem 
                             key={item.id} 
+                            id={item.id} 
                             image={item.image} 
                             name={item.name} 
                             price={item.price}
                         />
                     ))}
                 </ProductWrapper>
-            </S.Wrapper>
         </S.Spotlight>
     );
 }

@@ -1,31 +1,38 @@
 //Style file
 
-import styled from "styled-components"
+import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export const Wrapper = styled.div`
     position: relative;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
-    width: 100%;
-
-    @media screen and (max-width: 1600px){
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media screen and (max-width: 1200px){
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @media screen and (max-width: 800px){
-        grid-template-columns: repeat(1, 1fr);
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
 `
-export const Item = styled.div`
+export const Item = styled(NavLink)`
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2em;
+    text-decoration: none;
+
+    padding: 1em;
+    flex: 0 0 25%;
+    max-width: 25%;  
+
+    @media only screen and (max-width: 1600px) {
+        flex: 0 0 33%;
+        max-width: 33%;
+    }
+    @media only screen and (max-width: 1300px) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    @media only screen and (max-width: 1000px) {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
 `
 
 export const ItemBackground = styled.div`
@@ -48,15 +55,16 @@ export const ItemImage = styled.div`
     width: 100%;
 `
 
-export const ItemName = styled.p`
+export const ItemName = styled.div`
     color: black;
     font-size: 1em;
     text-align: center;
-    height: 3em;
+    word-break: break-word;
+    width: 100%;
 
 `
-export const ItemPrice = styled.p`
+export const ItemPrice = styled.span`
     color: black;
+    margin-top: 1em;
     font-size: 2em;
-    align-self: flex-start;
 `

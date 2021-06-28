@@ -1,31 +1,31 @@
 const links = [
     {
       label: "Acessórios",
-      url: "/",
+      url: "/accessory",
     },
     {
       label: "Áudio",
-      url: "/",
+      url: "/audio",
     },
     {
       label: "Cordas",
-      url: "/",
+      url: "/string",
     },
     {
       label: "Percussão",
-      url: "/",
+      url: "/percussion",
     },
     {
       label: "Teclas",
-      url: "/",
+      url: "/keyboard",
     },
     {
       label: "Sopro",
-      url: "/",
+      url: "/wind",
     },
     {
       label: "Piano",
-      url: "/",
+      url: "/piano",
     },
   ]
   

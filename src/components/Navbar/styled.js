@@ -23,7 +23,7 @@ export const Navbar = styled.nav`
                 rgba(0, 0, 0, 0.2) 0px 15px 10px 15px;
     /*color | offset-x | offset-y | blur-radius | spread-radius*/
 `
-export const Logo = styled.a`
+export const Logo = styled(NavLink)`
     position: relative;
     background-image: url(${logo});
     background-position: center; 
@@ -50,7 +50,7 @@ export const MenuWrapper = styled.div`
     height: 100%;
     flex-grow: 1;
 `
-export const MenuButton = styled.a`
+export const MenuButton = styled(NavLink)`
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -62,6 +62,7 @@ export const MenuButton = styled.a`
     background: white;
     color: black;
     text-transform: uppercase; 
+    text-decoration: none;
 
     font-family: 'Bebas Neue';
     font-size: 2em;

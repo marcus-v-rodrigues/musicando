@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect} from 'react'
 import gsap from 'gsap'
 
 import * as S from './styled'
-import links from './links'
+import links from '../links'
 
 const HamburgerMenu = ({ className }) => {
     

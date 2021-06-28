@@ -1,21 +1,19 @@
 import React from 'react'
 import * as S from "./styled"
 
+import links from './links'
+
 const Navbar = () => {
 
   return (
     <S.Navbar>
 
-        <S.Logo href={'/'}/>
+        <S.Logo to={'/'}/>
 
-        <S.MenuWrapper>  
-            <S.MenuButton>Acessórios</S.MenuButton>
-            <S.MenuButton>Áudio</S.MenuButton>
-            <S.MenuButton>Cordas</S.MenuButton>
-            <S.MenuButton>Percussão</S.MenuButton>
-            <S.MenuButton>Teclas</S.MenuButton>
-            <S.MenuButton>Sopro</S.MenuButton>
-            <S.MenuButton>Pianos</S.MenuButton>
+        <S.MenuWrapper>
+          {links.map((link, index) => (
+            <S.MenuButton to={link.url}>{link.label}</S.MenuButton>
+          ))}
         </S.MenuWrapper>
 
         <S.RightWrapper>    

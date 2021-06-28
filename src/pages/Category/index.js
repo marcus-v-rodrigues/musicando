@@ -5,7 +5,7 @@ import * as S from './styled'
 const Category = ({ category }) => {
     return (
         <PageContainer>
-            
+            {category}
         </PageContainer>
     )
 }

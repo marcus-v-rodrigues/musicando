@@ -8,7 +8,7 @@ export const Container = styled.section`
     align-items:center;
 
     height: calc(100vh - var(--navbar-height));
-    min-height: 55em;
+    min-height: 50em;
     width: 100%;
 
     background: linear-gradient(to right bottom, var(--light-brown), var(--dark-brown));

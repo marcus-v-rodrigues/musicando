@@ -13,7 +13,13 @@ const GlobalStyles = createGlobalStyle`
     }
 
     
-     //* { outline: 1px solid #f00 !important; } //Test to verify which component is causing a horizontal overflow
+    // * { outline: 1px solid #f00 !important; } //Test to verify which component is causing a horizontal overflow
+
+    * { 
+        margin: 0; 
+        padding: 0; 
+        outline: 0;
+    }
 
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -42,7 +48,7 @@ const GlobalStyles = createGlobalStyle`
         display: block;
     }
     body {
-        line-height: 1;
+        font-size: 100%;
     }
     ol, ul {
         list-style: none;
@@ -63,10 +69,6 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    body {
-        line-height: 1;
-        font-size: 100%;
-    }
     img {
         display: block;
         width: 100%;

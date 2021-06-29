@@ -93,3 +93,21 @@ yarn run start
 http://localhost:3000/
 
 **If it is not on port 3000, check the terminal that started the application to see the path that is defined**
+
+
+# Automated Testing
+
+In order to test our application funcionality, we developed a script to help you out in this task.
+All you have to do is install python 3, firefox and firefox geckodriver in your machine.
+
+With it all done, just execute the following steps:
+
+```bash
+cd autotest
+```
+
+```bash
+python autotest.py
+```
+
+It will getthe work done for you!

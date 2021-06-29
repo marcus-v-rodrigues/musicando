@@ -16,20 +16,23 @@ driver = webdriver.Firefox()
 driver.get("http://localhost:3000")
 
 element = driver.find_elements_by_class_name("sc-dIsUp.jXSUvX")
+element_link = [link.get_attribute('href') for link in element]
 
 scroll_page_down(driver)
 
-for e in element:
-    e.click()
+for e in element_link:
+    driver.get(e)
     sleep(1)
 
     scroll_page_down(driver)
 
-    # inner_ele = driver.find_elements_by_class_name("sc-ciSkZP.dcdDki")
-    # for ie in inner_ele:
-    #     ie.click()
-    #     scroll_page_down(driver)
-    #     driver.back()
+    inner_ele = driver.find_elements_by_class_name("sc-ciSkZP.dcdDki")
+    inner_links = [link.get_attribute('href') for link in inner_ele]
+    for link in inner_links:
+        driver.get(link)
+        sleep(1)
+        scroll_page_down(driver)
+        driver.back()
     
 driver.close() 
 

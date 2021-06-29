@@ -83,6 +83,10 @@ const HamburgerMenu = ({ className }) => {
                                 <S.Link to={link.url} onClick={() => setMenuExpanded(!menuExpanded)}>{link.label}</S.Link>
                             </S.Item>
                         ))}
+
+                        <S.Item ref={addToMenuItems}>
+                            <S.Link to={'/login'} onClick={() => setMenuExpanded(!menuExpanded)}>Entrar</S.Link>
+                        </S.Item>
                 </S.List>
             </S.Sidebar>
         </S.Wrapper>

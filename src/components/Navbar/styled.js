@@ -31,7 +31,7 @@ export const Logo = styled(NavLink)`
     background-repeat: no-repeat;
     height: 80%;
     min-width: 12em;
-    margin: 0 3em;
+    margin: 0 6em 0 3em;
 
     @media screen and (max-width: 700px){
         margin: 0 1em;
@@ -91,12 +91,11 @@ export const RightWrapper = styled.div`
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    width: 25%;
+    width: 20%;
     height: 100%;
-    margin: 1em 2em 1em 3em;
 
     @media screen and (max-width: 1400px){
         width: 20%;
@@ -118,9 +117,9 @@ export const Sign = styled(NavLink)`
 
     border: 3px solid var(--light-brown);
     border-radius: 0.5em;
-
+    margin-left: 3em;
     height: 40%;
-    width: 40%;
+    width: 50%;
 
     color: white;
     text-transform: uppercase;

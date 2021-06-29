@@ -86,15 +86,15 @@ export const ToggleBtn = styled.div`
 export const List = styled.ul`
   display: flex; 
   flex-direction: column;
-  align-items: flex-end;
-  padding: 6em 2em 0 0;
+  align-items: center;
+  padding: 6em 0 0 0;
   list-style: none;
 `
 
 export const Item = styled.li`  
   padding: 0.2em 0;
   display: flex;
-  font-size: 2em;
+  font-size: 1.6em;
   font-family: 'Bebas Neue';
   color: var(--light-brown);
 
@@ -104,12 +104,14 @@ export const Item = styled.li`
 `
 export const Link = styled(NavLink)`
 
-  --border-radius: 0.7em;
-
+  --border-radius: 0.5em;
+  
+  width: 6em; 
+  text-align: center;
   text-decoration: none !important;
   cursor: pointer;
   display: inline-block;
-	padding: 0.6em;
+	padding: 0.5em;
 
 	color: #fff;
   border-radius: var(--border-radius);

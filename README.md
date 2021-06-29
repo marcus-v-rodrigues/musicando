@@ -100,6 +100,8 @@ http://localhost:3000/
 In order to test our application funcionality, we developed a script to help you out in this task.
 All you have to do is install python 3, firefox and firefox geckodriver in your machine.
 
+The application must be running before the automatic test execution!
+
 With it all done, just execute the following steps:
 
 ```bash

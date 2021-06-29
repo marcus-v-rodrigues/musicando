@@ -76,7 +76,7 @@ npm install
 _or_
 
 ```bash
-yarn install
+yarn
 ```
 > **Start the application:**
 

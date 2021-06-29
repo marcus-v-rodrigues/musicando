@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
     justify-content: space-evenly;
     align-content: center;
 `
+
 export const Item = styled(NavLink)`
     position: relative;
     display: flex;

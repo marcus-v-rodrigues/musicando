@@ -1,19 +1,41 @@
 from utils import test_website
 from selenium import webdriver
 
-driver = webdriver.Chrome()
-driver.get("http://localhost:3000")
+url = "http://localhost:3000"
 
-test_website(driver)
+try:
+    driver = webdriver.Edge()
+    driver.get(url)
+    test_website(driver)
+    driver.close() 
+except:
+    print("Edge is not working properly.")
 
-driver.close() 
 
-driver = webdriver.Firefox()
-driver.get("http://localhost:3000")
+try:
+    driver = webdriver.Chrome()
+    driver.get(url)
+    test_website(driver)
+    driver.close() 
+except:
+    print("Chrome is not working properly.")
 
-test_website(driver)
+try:
+    driver = webdriver.Firefox()
+    driver.get(url)
+    test_website(driver)
+    driver.close() 
+except:
+    print("Firefox is not working properly.")
 
-driver.close() 
+
+try:
+    driver = webdriver.Opera()
+    driver.get(url)
+    test_website(driver)
+    driver.close()
+except:
+     print("Opera is not working properly.")
 
 
 

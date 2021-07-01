@@ -18,7 +18,7 @@ const ProductItem = ({id, image, name, price}) => {
               <S.ItemImage image={image}/>
           </S.ItemBackground>
           <S.ItemName>{name}</S.ItemName>
-          <S.ItemPrice>R$ {price}</S.ItemPrice>
+          <S.ItemPrice>{price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</S.ItemPrice>
       </S.Item>
     )
   }

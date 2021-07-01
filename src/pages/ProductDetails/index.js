@@ -6,6 +6,8 @@ import products from '../../data/products'
 
 const ProductDetails = ({ match }) => {
     const product = products.find(product => product.id === Number(match.params.id))
+    const locatedPrice = product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+
     return (
         <PageContainer>
             <S.Wrapper>
@@ -17,7 +19,7 @@ const ProductDetails = ({ match }) => {
 
                 <S.Text>
                     <S.ProductName>{product.name}</S.ProductName>
-                    <S.ProductPrice>R$ {product.price}</S.ProductPrice>
+                    <S.ProductPrice>{locatedPrice}</S.ProductPrice>
                     <S.CartButton>Adicionar ao carrinho</S.CartButton>
                 </S.Text>
 

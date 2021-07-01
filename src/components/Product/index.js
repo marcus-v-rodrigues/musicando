@@ -12,13 +12,15 @@ const ProductWrapper = ({children}) => {
 
 const ProductItem = ({id, image, name, price}) => {
 
+    const locatedPrice = price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+
     return (
       <S.Item to={`product/${id}`}>
           <S.ItemBackground>
               <S.ItemImage image={image}/>
           </S.ItemBackground>
           <S.ItemName>{name}</S.ItemName>
-          <S.ItemPrice>{price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</S.ItemPrice>
+          <S.ItemPrice>{locatedPrice}</S.ItemPrice>
       </S.Item>
     )
   }

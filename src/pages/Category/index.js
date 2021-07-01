@@ -5,7 +5,10 @@ import { ProductItem, ProductWrapper } from '../../components/Product'
 import * as S from './styled'
 import products from '../../data/products'
 
-const Category = ({ category }) => {
+// Redux
+import { connect } from "react-redux";
+
+const Category = ({ category, products }) => {
     return (
         <PageContainer>
             <S.Title>{category}</S.Title>
@@ -28,4 +31,10 @@ const Category = ({ category }) => {
     )
 }
 
-export default Category
+const mapStateToProps = (state) => {
+    return {
+      products: state.shop.products,
+    }
+}
+
+export default connect(mapStateToProps)(Category)

@@ -18,6 +18,7 @@ const ProductDetails = ({ match }) => {
                 <S.Text>
                     <S.ProductName>{product.name}</S.ProductName>
                     <S.ProductPrice>R$ {product.price}</S.ProductPrice>
+                    <S.CartButton>Adicionar ao carrinho</S.CartButton>
                 </S.Text>
 
                 </S.Content>

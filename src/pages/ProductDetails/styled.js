@@ -58,17 +58,20 @@ export const Text = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
     text-align: right;
     width: 100%;
 
     @media only screen and (max-width: 900px) {
         text-align: center;
+        align-items: center;
+        margin-top: 1em;
     }
 `
 
 export const ProductName = styled.div`
     color: black;
-    margin-top: 1em;
     font-size: 2em;
     word-break: break-word;
     width: 100%;
@@ -76,6 +79,61 @@ export const ProductName = styled.div`
 `
 export const ProductPrice = styled.span`
     color: black;
-    margin-top: 0.5em;
     font-size: 4em;
+`
+
+export const CartButton = styled.a`
+
+    --border-radius: 0.5em;
+    
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    
+	padding: 1em 2em;
+
+	color: #fff;
+    border-radius: var(--border-radius);
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+
+	transition: all .3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 3;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--light-brown);
+		border-radius: var(--border-radius);
+		z-index: -5;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: var(--dark-brown);
+		transition: all .3s;
+		border-radius: var(--border-radius);
+		z-index: -1;
+	}
+
+	&:hover {
+		color: #fff;
+		&:before {
+			width: 100%;
+		}
+	}
+
 `

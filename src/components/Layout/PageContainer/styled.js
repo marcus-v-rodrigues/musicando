@@ -5,7 +5,8 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: center;
+    padding: 4em 0;
 
     min-height: calc(100vh - var(--navbar-height));
     width: 100%;

@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     
-    // * { outline: 1px solid #f00 !important; } //Test to verify which component is causing a horizontal overflow
+    //* { outline: 1px solid #f00 !important; } //Test to verify which component is causing a horizontal overflow
 
     * { 
         margin: 0; 

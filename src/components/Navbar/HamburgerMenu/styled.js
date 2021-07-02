@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const Wrapper = styled.div`
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +32,7 @@ export const Sidebar = styled.div`
   }
 `
 
-export const Description = styled.p`
+export const Description = styled.span`
   position: relative;
   margin-top: 0.2em;
   font-size: 1.7em;
@@ -47,7 +47,6 @@ const thickness = 6;
 const Shape = styled.span`
   display: inline-block;
   position: absolute;
-  right: 0;
   width: 100%;
   height: ${thickness}px;
   border-radius: 3px;
@@ -70,7 +69,7 @@ export const Bottom = styled(Shape)`
 
 const side = 2.5;
 
-export const ToggleBtn = styled.div`
+export const HamburgerContainer = styled.div`
   position: relative;
   width: ${side}em;
   height: ${side}em;

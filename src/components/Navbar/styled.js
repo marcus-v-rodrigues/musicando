@@ -191,7 +191,7 @@ export const MobileWrapper = styled.div`
     position: relative;
     display: none;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
     width: 15em;
@@ -216,6 +216,10 @@ export const CartMobile = styled(Cart)`
 export const Menu = styled(HamburgerMenu)`
     display: flex;
     position: relative;
+
+    @media screen and (max-width: 800px){
+        font-size: 0.9em;
+    }
 `
 /*
 export const SearchForm = styled.form`

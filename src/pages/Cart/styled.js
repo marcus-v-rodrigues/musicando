@@ -99,7 +99,7 @@ export const CartButton = styled.button`
 	transition: all .3s;
 	position: relative;
 	overflow: hidden;
-	z-index: 3;
+	z-index: 1;
 
 	&:after {
 		content: '';

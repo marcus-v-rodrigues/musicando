@@ -26,6 +26,10 @@ const HamburgerMenu = ({ className }) => {
     useEffect(()=>{
 
         timeline.current = gsap.timeline({paused: true})
+        .from(lineThree.current, {
+            bottom: "0",
+            top: null
+        })
         .to(sidebar.current, {
             duration: 1.5,
             clipPath: `circle(200% at 16.3rem 3.7rem)`,
@@ -46,8 +50,8 @@ const HamburgerMenu = ({ className }) => {
         .to(lineThree.current, {
             duration: 0.5,
             scaleX: 1.5,
-            bottom: null,
             top: "50%",
+            bottom: "0",
             rotation: -45,
             ease: "power3",
         }, "<")
@@ -69,11 +73,11 @@ const HamburgerMenu = ({ className }) => {
 
     return (
         <S.Wrapper className={className}> {/*Using styled(Component) creates a class which is passed as a prop called className to the wrapped component.*/}
-            <S.ToggleBtn onClick={() => setMenuExpanded(!menuExpanded)}>
+            <S.HamburgerContainer onClick={() => setMenuExpanded(!menuExpanded)}>
                 <S.Top ref={lineOne}></S.Top>
                 <S.Middle ref={lineTwo}></S.Middle>
                 <S.Bottom ref={lineThree}></S.Bottom>
-            </S.ToggleBtn>
+            </S.HamburgerContainer>
             <S.Description>Menu</S.Description>
             <S.Sidebar ref={sidebar}>
                 <S.List>

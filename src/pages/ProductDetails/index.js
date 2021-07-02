@@ -43,4 +43,4 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 
-export default ProductDetails
+export default connect(null, mapDispatchToProps)(ProductDetails)

@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import * as S from "./styled"
 
 import links from './links'
 
-const Navbar = () => {
+import { connect } from 'react-redux'
+
+const Navbar = ({ cart }) => {
+
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.quantity
+    })
+
+    setCartCount(count)
+  }, [cart, cartCount])
 
   return (
     <S.Navbar>
@@ -19,7 +32,7 @@ const Navbar = () => {
         <S.RightWrapper>
             <S.Cart to={'/cart'}>
                 <S.CartImage/>
-                <S.CartCounter>1</S.CartCounter>
+                <S.CartCounter>{cartCount}</S.CartCounter>
             </S.Cart>
             <S.Sign to={'/login'} >Entrar</S.Sign>
         </S.RightWrapper>
@@ -27,7 +40,7 @@ const Navbar = () => {
         <S.MobileWrapper>
           <S.CartMobile to={'/cart'}>
                   <S.CartImage/>
-                  <S.CartCounter>1</S.CartCounter>
+                  <S.CartCounter>{cartCount}</S.CartCounter>
           </S.CartMobile>
 
           <S.Menu/>
@@ -37,4 +50,10 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+const mapStateToProps = (state) => {
+  return {
+    cart: state.shop.cart,
+  }
+}
+
+export default connect(mapStateToProps)(Navbar)

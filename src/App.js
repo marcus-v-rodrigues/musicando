@@ -1,7 +1,12 @@
 //Main project file 
 //What is here is what is built
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom' //React library to have multiple pages
+import { 
+  BrowserRouter,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom' //React library to have multiple pages
 
 import Layout from './components/Layout' //General component with Navbar and Footer
 
@@ -14,7 +19,9 @@ import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails'
 import Category from './pages/Category'
 
-const App = () => {
+//import { connect } from "react-redux"
+
+const App = ({ current }) => {
   return (
     <>
         <BrowserRouter>
@@ -23,8 +30,7 @@ const App = () => {
                     <Route exact path="/" component={ Main } />
                     <Route path="/login" component={ Login } />
                     <Route path="/cart" component={ Cart } />
-                    <Route path="/product/:id" component={ ProductDetails } />
-                    
+                    <Route path="/product/:id" component={ ProductDetails }/>
                     <Route path="/accessory" render={() => (<Category category={'Acessórios'} />)} />
                     <Route path="/audio" render={() => (<Category category={'Áudio'} />)} />
                     <Route path="/string" render={() => (<Category category={'Cordas'} />)} />

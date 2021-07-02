@@ -7,17 +7,17 @@ import {
   loadCurrentItem,
 } from "../../../redux/Shopping/shopping-actions"
 
-const ProductItem = ({ product }) => {
+const ProductItem = ({ product, loadCurrentItem }) => {
 
     const locatedPrice = product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
     return (
       <S.Item to={`product/${product.id}`} onClick={() => loadCurrentItem(product)}>
-          <S.ItemBackground>
-              <S.ItemImage image={product.image}/>
-          </S.ItemBackground>
-          <S.ItemName>{product.name}</S.ItemName>
-          <S.ItemPrice>{locatedPrice}</S.ItemPrice>
+        <S.ItemBackground>
+            <S.ItemImage image={product.image}/>
+        </S.ItemBackground>
+        <S.ItemName>{product.name}</S.ItemName>
+        <S.ItemPrice>{locatedPrice}</S.ItemPrice>
       </S.Item>
     )
 }

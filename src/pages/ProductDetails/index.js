@@ -10,9 +10,8 @@ import {
   addToCart,
 } from '../../redux/Shopping/shopping-actions'
 
-const ProductDetails = ({ match, addToCart }) => {
-    const product = products.find(product => product.id === Number(match.params.id))
-    const locatedPrice = product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+const ProductDetails = ({ current, addToCart }) => {
+    const locatedPrice = current.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
     return (
         <PageContainer>
@@ -20,13 +19,13 @@ const ProductDetails = ({ match, addToCart }) => {
                 <S.Content>
 
                 <S.Background>
-                    <S.Image image={product.image}/>
+                    <S.Image image={current.image}/>
                 </S.Background>
 
                 <S.Text>
-                    <S.ProductName>{product.name}</S.ProductName>
+                    <S.ProductName>{current.name}</S.ProductName>
                     <S.ProductPrice>{locatedPrice}</S.ProductPrice>
-                    <S.CartButton onClick={() => addToCart(product.id)}>Adicionar ao carrinho</S.CartButton>
+                    <S.CartButton onClick={() => addToCart(current.id)}>Adicionar ao carrinho</S.CartButton>
                 </S.Text>
 
                 </S.Content>
@@ -35,10 +34,16 @@ const ProductDetails = ({ match, addToCart }) => {
     )
 }
 
+const mapStateToProps = (state) => {
+    return {
+      current: state.shop.currentItem,
+    }
+  }
+
 const mapDispatchToProps = (dispatch) => {
     return {
       addToCart: (id) => dispatch(addToCart(id)),
     }
   }
 
-export default connect(null, mapDispatchToProps)(ProductDetails)
+export default connect(mapStateToProps, mapDispatchToProps)(ProductDetails)

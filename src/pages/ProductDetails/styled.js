@@ -82,7 +82,7 @@ export const ProductPrice = styled.span`
     font-size: 4em;
 `
 
-export const CartButton = styled.a`
+export const CartButton = styled.button`
 
     --border-radius: 0.5em;
     

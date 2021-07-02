@@ -36,6 +36,7 @@ export const CartContainer = styled.div`
 `
 export const Summary = styled.div`
     display: flex;
+    flex-grow: 0;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -44,6 +45,7 @@ export const Summary = styled.div`
     box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 
     width: 30%;
+    max-height: 25em;
 
     @media screen and (max-width: 1000px) {
         margin-bottom: 3em;
@@ -136,10 +138,8 @@ export const Wrapper = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 60%;
-	padding: 3em;
-	background: white;
-    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 
     @media screen and (max-width: 1000px) {
         width: 100%;

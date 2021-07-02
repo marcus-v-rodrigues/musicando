@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PageContainer from '../../components/Layout/PageContainer'
+import CartItem from './CartItem'
 import * as S from './styled'
 
 import { connect } from 'react-redux'
@@ -28,7 +29,9 @@ const Cart = ({ cart }) => {
         <S.CartContainer>
 
             <S.Wrapper>
-
+                {cart.map((item) => (
+                    <CartItem key={item.id} item={item} />
+                ))}
             </S.Wrapper>
 
             <S.Summary>

@@ -24,21 +24,30 @@ const HamburgerMenu = ({ className }) => {
     const [menuExpanded, setMenuExpanded] = useState(false)
 
     useEffect(()=>{
+        gsap.set(lineOne.current, {
+            top: "0%",
+            yPercent: 0
+        })
+        gsap.set(lineTwo.current, {
+            top: "50%",
+            yPercent: -50
+        })
+        gsap.set(lineThree.current, {
+            top: "100%",
+            yPercent: -100
+        })
 
         timeline.current = gsap.timeline({paused: true})
-        .from(lineThree.current, {
-            bottom: "0",
-            top: null
-        })
         .to(sidebar.current, {
             duration: 1.5,
             clipPath: `circle(200% at 16.3rem 3.7rem)`,
             ease: "power3"
         }, "0")
         .to(lineOne.current, {
+            top: "50%",
+            yPercent: -50,
             duration: 0.5,
             scaleX: 1.5,
-            top: "50%",
             rotation: 45,
             ease: "power3"
         }, "<")
@@ -48,10 +57,10 @@ const HamburgerMenu = ({ className }) => {
             ease: "power3"
         }, "<")
         .to(lineThree.current, {
+            top: "50%",
+            yPercent: -50,
             duration: 0.5,
             scaleX: 1.5,
-            top: "50%",
-            bottom: "0",
             rotation: -45,
             ease: "power3",
         }, "<")

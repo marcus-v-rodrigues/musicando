@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as S from './styled'
 
-const CartItem = ({ item }) => {
+import { connect } from 'react-redux'
 
+import {
+    adjustItemQuantity,
+    removeFromCart,
+  } from '../../../redux/Shopping/shopping-actions'
+
+const CartItem = ({ item, adjustQuantity, removeFromCart }) => {
+
+    const [input, setInput] = useState(item.quantity)
+
+    const onChangeHandler = (e) => {
+        setInput(e.target.value)
+        adjustQuantity(item.id, e.target.value)
+    };
     const locatedPrice = item.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
     return (
@@ -27,10 +40,11 @@ const CartItem = ({ item }) => {
                             type="number"
                             id="quantity"
                             name="quantity"
-                            value={item.quantity}
+                            value={input}
+                            onChange={onChangeHandler}
                         />
                     </S.ItemQuantity>
-                    <S.ItemButton>Remover</S.ItemButton>
+                    <S.ItemButton onClick={() => removeFromCart(item.id)}>Remover</S.ItemButton>
                 </S.Actions>
 
             </S.Content>
@@ -39,4 +53,11 @@ const CartItem = ({ item }) => {
     )
 }
 
-export default CartItem
+const mapDispatchToProps = (dispatch) => {
+    return {
+      adjustQuantity: (id, value) => dispatch(adjustItemQuantity(id, value)),
+      removeFromCart: (id) => dispatch(removeFromCart(id)),
+    }
+  }
+
+export default connect(null, mapDispatchToProps)(CartItem)

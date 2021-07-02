@@ -45,7 +45,7 @@ export const Summary = styled.div`
     box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 
     width: 30%;
-    max-height: 25em;
+    max-height: 20em;
 
     @media screen and (max-width: 1000px) {
         margin-bottom: 3em;

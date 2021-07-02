@@ -18,7 +18,7 @@ const Spotlight = ({items, title}) => {
                     ))}
                 </ProductWrapper>
         </S.Spotlight>
-    );
+    )
 }
 
-export default Spotlight;
+export default Spotlight

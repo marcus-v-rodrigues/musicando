@@ -16,11 +16,22 @@ const Navbar = () => {
           ))}
         </S.MenuWrapper>
 
-        <S.RightWrapper>    
+        <S.RightWrapper>
+            <S.Cart to={'/cart'}>
+                <S.CartImage/>
+                <S.CartCounter>1</S.CartCounter>
+            </S.Cart>
             <S.Sign to={'/login'} >Entrar</S.Sign>
         </S.RightWrapper>
+        
+        <S.MobileWrapper>
+          <S.CartMobile to={'/cart'}>
+                  <S.CartImage/>
+                  <S.CartCounter>1</S.CartCounter>
+          </S.CartMobile>
 
-        <S.Menu/>
+          <S.Menu/>
+        </S.MobileWrapper>
 
     </S.Navbar>
   )

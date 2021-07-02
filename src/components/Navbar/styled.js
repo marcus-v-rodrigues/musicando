@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 import HamburgerMenu from './HamburgerMenu'
 
 import logo from './images/Musicando.svg'
+import cart from './images/Cart.svg'
 
 export const Navbar = styled.nav`
     position:relative;
@@ -29,9 +30,13 @@ export const Logo = styled(NavLink)`
     background-position: center; 
     background-size: contain;
     background-repeat: no-repeat;
-    height: 80%;
+    height: 100%;
     min-width: 12em;
-    margin: 0 6em 0 3em;
+    margin: 0 3em 0 2em;
+
+    @media screen and (max-width: 1500px){
+        margin: 0 2em;
+    }
 
     @media screen and (max-width: 700px){
         margin: 0 1em;
@@ -91,15 +96,11 @@ export const RightWrapper = styled.div`
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
     width: 20%;
     height: 100%;
-
-    @media screen and (max-width: 1400px){
-        width: 20%;
-    }
 
     @media screen and (max-width: 1300px){
         display: none;
@@ -109,7 +110,7 @@ export const RightWrapper = styled.div`
 export const Sign = styled(NavLink)`
     position: relative;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 
     cursor: pointer;
@@ -117,9 +118,8 @@ export const Sign = styled(NavLink)`
 
     border: 3px solid var(--light-brown);
     border-radius: 0.5em;
-    margin-left: 3em;
     height: 40%;
-    width: 50%;
+    width: 40%;
 
     color: white;
     text-transform: uppercase;
@@ -139,21 +139,83 @@ export const Sign = styled(NavLink)`
     }
 `
 
-export const Menu = styled(HamburgerMenu)`
+export const Cart = styled(NavLink)`
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    --size: 4rem;
+
+    width: auto;
+    height: var(--size);
+
+    @media screen and (max-width: 800px){
+        --size: 3rem;
+    }
+`
+export const CartImage = styled.div`
+    position: relative;
+    background-image: url(${cart});
+    background-position: center; 
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    height: var(--size);
+    width: var(--size);
+`
+export const CartCounter = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+
+    --size: 2rem;
+
+    height: var(--size);
+    width: var(--size);
+    border-radius: 50%;
+    color: black;
+    background: yellow;
+    font-size: 1em; 
+    font-weight: 600;
+
+    @media screen and (max-width: 800px){
+        --size: 1.5rem;
+    }
+`
+
+export const MobileWrapper = styled.div`
+    position: relative;
     display: none;
-    position: absolute;
-    right: 3em;
-    top: 3em;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 15em;
+    height: 100%;
 
     @media screen and (max-width: 1300px){
         display: flex;
     }
 
-    @media screen and (max-width: 800px){
-        right: 1em;
-        top: 1em;
+    @media screen and (max-width: 600px){
+        font-size: 0.8em;
+        width: 12em;
     }
+`
+export const CartMobile = styled(Cart)`
+    display: none;
 
+    @media screen and (max-width: 1300px){
+        display: flex;
+    }
+`
+export const Menu = styled(HamburgerMenu)`
+    display: flex;
+    position: relative;
 `
 /*
 export const SearchForm = styled.form`

@@ -3,10 +3,10 @@ import PageContainer from '../../components/Layout/PageContainer'
 import { ProductItem, ProductWrapper } from '../../components/Product'
 
 import * as S from './styled'
-import products from '../../data/products'
+//import products from '../../data/products'
 
 // Redux
-import { connect } from "react-redux";
+import { connect } from 'react-redux'
 
 const Category = ({ category, products }) => {
     return (

@@ -1,6 +1,7 @@
 import React from 'react'
 import PageContainer from '../../components/Layout/PageContainer'
-import { ProductItem, ProductWrapper } from '../../components/Product'
+import ProductItem from '../../components/Product/ProductItem'
+import ProductWrapper from '../../components/Product/ProductWrapper'
 
 import * as S from './styled'
 //import products from '../../data/products'
@@ -19,10 +20,7 @@ const Category = ({ category, products }) => {
                         product.category === category &&
                         <ProductItem 
                             key={product.id} 
-                            id={product.id} 
-                            image={product.image} 
-                            name={product.name} 
-                            price={product.price}
+                            product={product}
                         />
                     ))}
                 </ProductWrapper>

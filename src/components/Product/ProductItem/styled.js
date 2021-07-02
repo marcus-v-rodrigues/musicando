@@ -3,14 +3,6 @@
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
-export const Wrapper = styled.div`
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: center;
-`
-
 export const Item = styled(NavLink)`
     position: relative;
     display: flex;

@@ -1,6 +1,7 @@
 import React from 'react'
 import * as S from "./styled"
-import {ProductWrapper, ProductItem} from 'components/Product' 
+import ProductItem from '../../../../components/Product/ProductItem'
+import ProductWrapper from '../../../../components/Product/ProductWrapper'
 
 const Spotlight = ({items, title}) => {
     return (
@@ -10,10 +11,7 @@ const Spotlight = ({items, title}) => {
                     {items.map(item => (
                         <ProductItem 
                             key={item.id} 
-                            id={item.id} 
-                            image={item.image} 
-                            name={item.name} 
-                            price={item.price}
+                            product={item}
                         />
                     ))}
                 </ProductWrapper>

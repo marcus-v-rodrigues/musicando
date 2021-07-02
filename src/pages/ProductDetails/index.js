@@ -7,7 +7,6 @@ import products from '../../data/products'
 // Redux
 import { connect } from 'react-redux'
 import {
-  loadCurrentItem,
   addToCart,
 } from '../../redux/Shopping/shopping-actions'
 
@@ -39,7 +38,6 @@ const ProductDetails = ({ match, addToCart }) => {
 const mapDispatchToProps = (dispatch) => {
     return {
       addToCart: (id) => dispatch(addToCart(id)),
-      loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
     }
   }
 

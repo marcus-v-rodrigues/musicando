@@ -15,13 +15,15 @@ const Cart = ({ cart }) => {
         let price = 0
 
         cart.forEach((item) => {
-        items += item.qty
-        price += item.qty * item.price
+        items += item.quantity
+        price += item.quantity * item.price
         })
 
         setTotalItems(items)
         setTotalPrice(price)
     }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems])
+
+    let locatedPrice = totalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
   return (
     <PageContainer>
@@ -37,8 +39,8 @@ const Cart = ({ cart }) => {
             <S.Summary>
                 <S.SummaryTitle>Lista de Compras</S.SummaryTitle>
                 <S.SummaryInfo>
-                    <S.SummaryItems>itens</S.SummaryItems>
-                    <S.SummaryTotal>R$</S.SummaryTotal>
+                    <S.SummaryItems>{totalItems} itens</S.SummaryItems>
+                    <S.SummaryTotal>{locatedPrice}</S.SummaryTotal>
                 </S.SummaryInfo>
                 <S.CartButton>Comprar</S.CartButton>
             </S.Summary>

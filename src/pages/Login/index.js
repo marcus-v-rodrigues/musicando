@@ -28,7 +28,7 @@ const Login = () => {
                             Esqueceu sua senha?
                     </S.ForgotPassword>
 
-                    <S.Button href="/parent">Entrar</S.Button>
+                    <S.Button to='/admin'>Entrar</S.Button>
                 </S.LoginWrapper>
 
             </S.FormWrapper>

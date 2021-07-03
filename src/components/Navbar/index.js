@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+
+import { ButtonLink } from 'components/Button'
+
 import * as S from "./styled"
 
 import links from './links'
@@ -34,7 +37,7 @@ const Navbar = ({ cart }) => {
                 <S.CartImage/>
                 <S.CartCounter>{cartCount}</S.CartCounter>
             </S.Cart>
-            <S.Sign to={'/login'} >Entrar</S.Sign>
+            <ButtonLink to={'/login'}>Entrar</ButtonLink>
         </S.RightWrapper>
         
         <S.MobileWrapper>

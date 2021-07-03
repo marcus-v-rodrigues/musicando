@@ -2,7 +2,7 @@ import React from 'react'
 import PageContainer from '../../components/Layout/PageContainer'
 import * as S from './styled'
 
-import products from '../../data/products'
+import { Button } from '../../components/Button'
 
 // Redux
 import { connect } from 'react-redux'
@@ -25,7 +25,7 @@ const ProductDetails = ({ current, addToCart }) => {
                 <S.Text>
                     <S.ProductName>{current.name}</S.ProductName>
                     <S.ProductPrice>{locatedPrice}</S.ProductPrice>
-                    <S.CartButton onClick={() => addToCart(current.id)}>Adicionar ao carrinho</S.CartButton>
+                    <Button onClick={() => addToCart(current.id)}>Adicionar ao carrinho</Button>
                 </S.Text>
 
                 </S.Content>

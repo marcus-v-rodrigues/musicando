@@ -5,7 +5,10 @@ import * as S from './styled'
 const Admin = () => {
     return (
         <PageContainer>
-            
+            <S.Title>Administrador</S.Title>
+            <S.Wrapper>
+                
+            </S.Wrapper>
         </PageContainer>
     )
 }

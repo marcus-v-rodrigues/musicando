@@ -9,7 +9,7 @@ const Admin = () => {
             <S.Title>Administrador</S.Title>
             <S.Wrapper>
                 <ButtonLink to={'/admin'}>Usuários</ButtonLink>
-                <ButtonLink to={'/admin'}>Produtos</ButtonLink>
+                <ButtonLink to={'/admin/products'}>Produtos</ButtonLink>
             </S.Wrapper>
         </PageContainer>
     )

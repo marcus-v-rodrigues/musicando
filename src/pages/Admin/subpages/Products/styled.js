@@ -23,11 +23,8 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     width: 60%;
 
-    @media screen and (max-width: 1000px) {
-        width: 100%;
-    }
-
     @media screen and (max-width: 600px) {
+        width: 100%;
         padding: 1em;
     }
 

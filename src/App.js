@@ -18,6 +18,7 @@ import Login from './pages/Login'
 import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails'
 import Category from './pages/Category'
+import Admin from './pages/Admin'
 
 //import { connect } from "react-redux"
 
@@ -31,6 +32,7 @@ const App = ({ current }) => {
                     <Route path="/login" component={ Login } />
                     <Route path="/cart" component={ Cart } />
                     <Route path="/product/:id" component={ ProductDetails }/>
+                    <Route path="/admin" component={ Admin }/>
                     <Route path="/accessory" render={() => (<Category category={'Acessórios'} />)} />
                     <Route path="/audio" render={() => (<Category category={'Áudio'} />)} />
                     <Route path="/string" render={() => (<Category category={'Cordas'} />)} />

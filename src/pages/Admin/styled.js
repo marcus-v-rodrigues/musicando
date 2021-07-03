@@ -7,28 +7,25 @@ export const Title = styled.h1`
     font-size: 4em;
     font-family: 'Fredoka One';
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 700px) {
+        font-size: 3em;
+    }
+
+    @media screen and (max-width: 450px) {
         font-size: 2em;
     }
 `
 
 export const Wrapper = styled.div`
     position: relative;
-    display: flex;
-    flex-direction: column;
-    max-width: 105em;
-    width: 90%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2em;
+    max-width: 50em;
+    width: 80%;
+    min-width: 20em;
 	padding: 3em;
 	background: white;
     box-shadow: var(--shadow);
 
-    @media screen and (max-width: 600px) {
-        width: 25em;
-        padding: 1em;
-    }
-
-    @media screen and (max-width: 400px) {
-        width: 100%;
-        padding: 1em 0;
-    }
 ` 

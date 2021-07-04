@@ -21,31 +21,31 @@ def scroll_page_down(driver, len=1):
         driver.execute_script(f"window.scrollTo(0,{x});")
         sleep(SCROLL_TIME)
 
-
 def test_website(driver, url):
     driver.get(url)
 
     sizes = [IPHONE, IPAD, driver.get_window_size()]
     
-    element = driver.find_elements_by_class_name("sc-dIsUp.jXSUvX")
-    element_link = [link.get_attribute('href') for link in element]
+    element = driver.find_elements_by_class_name("sc-ksluID.bocajo")
 
     test_reponsivity(driver, sizes)
-        
 
-    for e in element_link:
-        driver.get(e)
+    for e in element:
+        e.click()
         
         test_reponsivity(driver, sizes)
 
-        inner_ele = driver.find_elements_by_class_name("sc-ciSkZP.dcdDki")
-        inner_links = [link.get_attribute('href') for link in inner_ele]
-        for link in inner_links:
-            driver.get(link)
+        inner_ele = driver.find_elements_by_class_name("sc-efHYUO.cQWItu")
+        for link in inner_ele:
+            link.click()
             sleep(WAIT)
-            scroll_page_down(driver)
+            test_reponsivity(driver, sizes)
             driver.back()
+            break
         
+        driver.back()
+        break
+
 
     driver.get(url+"/cart")
     scroll_page_down(driver, 0.1)
@@ -53,13 +53,13 @@ def test_website(driver, url):
 
     driver.get(url)
     product = driver.find_elements_by_class_name("sc-efHYUO.cQWItu")
+    print(product)
     product[0].click()
 
     scroll_page_down(driver, 0.1)
-    sleep(WAIT*3)  
-
-    add_chart_btn = driver.find_elements_by_class_name("sc-bdnxRM.exJeZX")
+    add_chart_btn = driver.find_elements_by_tag_name("button")
     add_chart_btn[0].click()
+    sleep(WAIT*3)  
     driver.get(url+"/cart")
     scroll_page_down(driver, 0.1)
     sleep(WAIT*3)

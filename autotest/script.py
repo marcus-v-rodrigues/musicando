@@ -25,26 +25,26 @@ def scroll_page_down(driver, len=1):
 def test_website(driver, url):
     driver.get(url)
 
-    # sizes = [IPHONE, IPAD, driver.get_window_size()]
+    sizes = [IPHONE, IPAD, driver.get_window_size()]
     
-    # element = driver.find_elements_by_class_name("sc-dIsUp.jXSUvX")
-    # element_link = [link.get_attribute('href') for link in element]
+    element = driver.find_elements_by_class_name("sc-dIsUp.jXSUvX")
+    element_link = [link.get_attribute('href') for link in element]
 
-    # test_reponsivity(driver, sizes)
+    test_reponsivity(driver, sizes)
         
 
-    # for e in element_link:
-    #     driver.get(e)
+    for e in element_link:
+        driver.get(e)
         
-    #     test_reponsivity(driver, sizes)
+        test_reponsivity(driver, sizes)
 
-    #     inner_ele = driver.find_elements_by_class_name("sc-ciSkZP.dcdDki")
-    #     inner_links = [link.get_attribute('href') for link in inner_ele]
-    #     for link in inner_links:
-    #         driver.get(link)
-    #         sleep(WAIT)
-    #         scroll_page_down(driver)
-    #         driver.back()
+        inner_ele = driver.find_elements_by_class_name("sc-ciSkZP.dcdDki")
+        inner_links = [link.get_attribute('href') for link in inner_ele]
+        for link in inner_links:
+            driver.get(link)
+            sleep(WAIT)
+            scroll_page_down(driver)
+            driver.back()
         
 
     driver.get(url+"/cart")

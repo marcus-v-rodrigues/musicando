@@ -69,7 +69,6 @@ export const Details = styled.div`
 
     @media screen and (max-width: 1300px) {
         align-items: center;
-        text-align: center;
     }
 `
 export const ItemName = styled.span`

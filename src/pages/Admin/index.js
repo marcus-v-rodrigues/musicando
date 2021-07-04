@@ -8,7 +8,7 @@ const Admin = () => {
         <PageContainer>
             <S.Title>Administrador</S.Title>
             <S.Wrapper>
-                <ButtonLink to={'/admin'}>Usuários</ButtonLink>
+                <ButtonLink to={'/admin/users'}>Usuários</ButtonLink>
                 <ButtonLink to={'/admin/products'}>Produtos</ButtonLink>
             </S.Wrapper>
         </PageContainer>

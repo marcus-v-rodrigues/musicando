@@ -1,7 +1,7 @@
 import React from 'react'
 
 import PageContainer from 'components/Layout/PageContainer'
-import UsersItem from './UserItem'
+import UsersItem from './UsersItem'
 
 import * as S from './styled'
 
@@ -14,7 +14,7 @@ const Users = () => {
             
             <S.Wrapper>
                 {users.map((user) => (
-                    <UsersItem key={user.id} product={user} />
+                    <UsersItem key={user.id} user={user} />
                 ))}
             </S.Wrapper>
         </PageContainer>

@@ -20,8 +20,8 @@ const Products = ({ products }) => {
                 </S.Wrapper>
 
                 <S.Panel>
-                    <S.PanelTitle>Criar novo produto</S.PanelTitle>
-                    <Button onClick={() => alert('Função ainda não implementada')}>Criar</Button>
+                    <S.PanelTitle>Cadastrar novo produto</S.PanelTitle>
+                    <Button onClick={() => alert('Função ainda não implementada')}>Cadastrar</Button>
                 </S.Panel>
             </S.Container>
            

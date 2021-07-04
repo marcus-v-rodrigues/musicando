@@ -11,7 +11,7 @@ import users from 'data/users'
 const Users = () => {
     return (
         <PageContainer>
-            <S.Title>Produtos</S.Title>
+            <S.Title>Usuários</S.Title>
             
             <S.Container>
                 <S.Wrapper>

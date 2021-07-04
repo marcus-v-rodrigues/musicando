@@ -3,11 +3,11 @@ from selenium import webdriver
 
 url = "http://localhost:3000"
 
-#try:
-driver = webdriver.Firefox()
-test_website(driver, url)
-#except:
-#    print("Firefox is not working properly.")
+try:
+    driver = webdriver.Firefox()
+    test_website(driver, url)
+except:
+    print("Firefox is not working properly.")
 
 try:
     driver = webdriver.Edge()
@@ -16,11 +16,11 @@ except:
     print("Edge is not working properly.")
 
 
-#try:
-driver = webdriver.Chrome()
-test_website(driver, url)
-#except:
-#    print("Chrome is not working properly.")
+try:
+    driver = webdriver.Chrome()
+    test_website(driver, url)
+except:
+    print("Chrome is not working properly.")
 
 
 try:

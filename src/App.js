@@ -5,7 +5,6 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Redirect
 } from 'react-router-dom' //React library to have multiple pages
 
 import Layout from './components/Layout' //General component with Navbar and Footer
@@ -43,12 +42,7 @@ const App = ({ current }) => {
                     <Route path="/keyboard" render={() => (<Category category={'Teclas'} />)} />
                     <Route path="/wind" render={() => (<Category category={'Sopro'} />)} />
                     <Route path="/piano" render={() => (<Category category={'Piano'} />)} />
-
-                    {!current ? (
-                      <Redirect to="/" />
-                    ) : (
-                      <Route exact path="/product/:id" component={ ProductDetails }/>
-                    )}
+                    <Route exact path="/product/:id" component={ ProductDetails }/>
                 </Switch>
             </Layout>
         </BrowserRouter>

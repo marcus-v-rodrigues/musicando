@@ -1,7 +1,6 @@
 import React from 'react'
-import PageContainer from '../../components/Layout/PageContainer'
-import * as S from './styled'
 
+import PageContainer from '../../components/Layout/PageContainer'
 import { Button } from '../../components/Button'
 
 // Redux
@@ -10,7 +9,11 @@ import {
   addToCart,
 } from '../../redux/Shopping/shopping-actions'
 
-const ProductDetails = ({ current, addToCart }) => {
+import * as S from './styled'
+
+const ProductDetails = ({ current, product, addToCart }) => {
+
+    current = current === null ? product : current
     const locatedPrice = current.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
     return (
@@ -34,8 +37,9 @@ const ProductDetails = ({ current, addToCart }) => {
     )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
+      product: state.shop.products.find((product) => product.id === Number(ownProps.match.params.id)),
       current: state.shop.currentItem,
     }
   }

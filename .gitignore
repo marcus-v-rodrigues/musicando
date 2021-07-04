@@ -24,4 +24,5 @@ yarn-error.log*
 
 
 # autotest
-./autotest/*.log
+musicando/autotest/geckodriver.log
+musicando/autotest/__pycache__

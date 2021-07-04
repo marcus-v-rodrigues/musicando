@@ -107,38 +107,6 @@ export const RightWrapper = styled.div`
     }
 `
 
-export const Sign = styled(NavLink)`
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer;
-    background: var(--light-brown);
-
-    border: 3px solid var(--light-brown);
-    border-radius: 0.5em;
-    height: 40%;
-    width: 40%;
-
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Bebas Neue';
-    font-size: 1.5em; 
-    text-decoration: none;
-
-    transition: background 0.5s ease-in-out;
-
-    &:hover{
-        background: white;
-        color: var(--light-brown);
-    }
-
-    @media screen and (max-width: 1400px){
-        font-size: 1.2em; 
-    }
-`
-
 export const Cart = styled(NavLink)`
     position: relative;
     display: flex;
@@ -191,8 +159,9 @@ export const MobileWrapper = styled.div`
     position: relative;
     display: none;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding-left: 2em;
 
     width: 15em;
     height: 100%;
@@ -203,7 +172,6 @@ export const MobileWrapper = styled.div`
 
     @media screen and (max-width: 600px){
         font-size: 0.8em;
-        width: 12em;
     }
 `
 export const CartMobile = styled(Cart)`
@@ -216,6 +184,11 @@ export const CartMobile = styled(Cart)`
 export const Menu = styled(HamburgerMenu)`
     display: flex;
     position: relative;
+    margin-right: 2em;
+
+    @media screen and (max-width: 800px){
+        font-size: 0.9em;
+    }
 `
 /*
 export const SearchForm = styled.form`

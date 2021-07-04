@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     width: 90%;
 	padding: 3em;
 	background: white;
-    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    box-shadow: var(--shadow);
 
     @media screen and (max-width: 600px) {
         width: 25em;
@@ -80,60 +80,4 @@ export const ProductName = styled.div`
 export const ProductPrice = styled.span`
     color: black;
     font-size: 4em;
-`
-
-export const CartButton = styled.button`
-
-    --border-radius: 0.5em;
-    
-    font-size: 1.5rem;
-    text-align: center;
-    text-decoration: none !important;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    
-	padding: 1em 2em;
-
-	color: #fff;
-    border-radius: var(--border-radius);
-    font-family: 'Bebas Neue';
-    text-transform: uppercase;
-
-	transition: all .3s;
-	position: relative;
-	overflow: hidden;
-	z-index: 3;
-
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: var(--light-brown);
-		border-radius: var(--border-radius);
-		z-index: -5;
-	}
-	&:before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0%;
-		height: 100%;
-		background-color: var(--dark-brown);
-		transition: all .3s;
-		border-radius: var(--border-radius);
-		z-index: -1;
-	}
-
-	&:hover {
-		color: #fff;
-		&:before {
-			width: 100%;
-		}
-	}
-
 `

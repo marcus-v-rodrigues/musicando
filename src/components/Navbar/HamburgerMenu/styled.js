@@ -2,20 +2,19 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const Wrapper = styled.div`
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
 export const Sidebar = styled.div`
-  --long-distance: -3em;
-  --short-distance: -1em;
+  --distance: -2em;
   --width: 20em;
 
   position: absolute;
-  top: var(--long-distance);
-  right: var(--long-distance);
+  top: var(--distance);
+  right: var(--distance);
   width: var(--width);
   background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
   box-shadow:0 0.5em 1em rgba(0, 0, 0, 0.15); 
@@ -23,16 +22,16 @@ export const Sidebar = styled.div`
   border-radius: 2em 0 0 2em;
   padding: 2em;
   z-index:3;
-  clip-path: circle(0 at calc(var(--width) + calc(var(--long-distance) * 2)) calc(var(--long-distance) * -1));
+  clip-path: circle(0 at calc(var(--width) + calc(var(--distance) * 2)) calc(var(--distance) * -1));
 
   @media screen and (max-width: 800px){
-    top: var(--short-distance);
-    right: var(--short-distance);
-    clip-path: circle(0 at calc(var(--width) + calc(var(--short-distance) * 2.5)) calc(var(--short-distance) * -3));
+    top: var(--distance);
+    right: var(--distance);
+    clip-path: circle(0 at calc(var(--width) + calc(var(--distance) * 2.5)) calc(var(--distance) * -3));
   }
 `
 
-export const Description = styled.p`
+export const Description = styled.span`
   position: relative;
   margin-top: 0.2em;
   font-size: 1.7em;
@@ -47,7 +46,6 @@ const thickness = 6;
 const Shape = styled.span`
   display: inline-block;
   position: absolute;
-  right: 0;
   width: 100%;
   height: ${thickness}px;
   border-radius: 3px;
@@ -55,22 +53,17 @@ const Shape = styled.span`
 `
 
 export const Top = styled(Shape)`
-  top: 0;
 `
 
 export const Middle = styled(Shape)`
-  top: 50%;
-  bottom: 50%;
-  transform: translateY(-50%);
 `
 
 export const Bottom = styled(Shape)`
-  bottom: 0;
 `
 
 const side = 2.5;
 
-export const ToggleBtn = styled.div`
+export const HamburgerContainer = styled.div`
   position: relative;
   width: ${side}em;
   height: ${side}em;

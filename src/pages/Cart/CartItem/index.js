@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import * as S from './styled'
 
+import { Button } from 'components/Button'
 import { connect } from 'react-redux'
 
 import {
@@ -44,7 +45,7 @@ const CartItem = ({ item, adjustQuantity, removeFromCart }) => {
                             onChange={onChangeHandler}
                         />
                     </S.ItemQuantity>
-                    <S.ItemButton onClick={() => removeFromCart(item.id)}>Remover</S.ItemButton>
+                    <Button onClick={() => removeFromCart(item.id)}>Remover</Button>
                 </S.Actions>
 
             </S.Content>

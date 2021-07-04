@@ -7,13 +7,15 @@ const GlobalStyles = createGlobalStyle`
         --light-brown: #8d6852;
         --dark-brown: #462e25;
 
+        --shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+
         @media screen and (max-width: 800px){
             --navbar-height: 100px;
         }
     }
 
     
-    // * { outline: 1px solid #f00 !important; } //Test to verify which component is causing a horizontal overflow
+    //* { outline: 1px solid #f00 !important; } //Test to verify which component is causing a horizontal overflow
 
     * { 
         margin: 0; 

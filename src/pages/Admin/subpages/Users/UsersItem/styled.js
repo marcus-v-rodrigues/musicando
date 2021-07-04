@@ -57,7 +57,7 @@ export const Content = styled.div`
     flex: 1;
 
     @media screen and (max-width: 1300px) {
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 3fr 2fr;
         grid-template-columns: repeat(1, 1fr);
         justify-content: center;
     }
@@ -69,19 +69,18 @@ export const Details = styled.div`
 
     @media screen and (max-width: 1300px) {
         align-items: center;
-        text-align: center;
     }
 `
 export const ItemName = styled.span`
     color: black;
-    font-size: 1.2em;
+    font-size: 2em;
     word-break: break-word;
     width: 100%;
 
 `
-export const ItemPrice = styled.span`
+export const ItemInfo = styled.span`
     color: black;
-    font-size: 2em;
+    font-size: 1.5em;
     width: 100%;
 `
 export const Actions = styled.div`
@@ -91,21 +90,8 @@ export const Actions = styled.div`
     align-items: flex-end;
 
     @media screen and (max-width: 1300px) {
+        justify-content: space-around;
+        flex-direction: row;
         align-items: center;
     }
-`
-
-export const ItemQuantity = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    @media screen and (max-width: 1300px) {
-        margin-bottom: 1em;
-    }
-    
-`
-export const InputQuantity = styled.input`
-    font-size: 1.5em;
-    max-width: 3em;
 `

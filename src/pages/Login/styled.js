@@ -1,5 +1,6 @@
 //Style file
 
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 import microphone from './images/microphone.jpg'
@@ -20,7 +21,7 @@ export const FormBackground = styled.div`
 	min-height: 40em;
 	
 	background:url(${microphone}) no-repeat center/cover;
-	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	box-shadow:var(--shadow);
 `
 
 export const FormWrapper = styled.div`
@@ -75,7 +76,7 @@ export const ForgotPassword = styled.a`
     margin-bottom: 2em;
 `
 
-export const Button = styled.a`
+export const Button = styled(NavLink)`
 
 	position: relative;
 	overflow: hidden;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Button } from 'components/Button'
 import PageContainer from '../../components/Layout/PageContainer'
 import CartItem from './CartItem'
 import * as S from './styled'
@@ -42,7 +43,7 @@ const Cart = ({ cart }) => {
                     <S.SummaryItems>{totalItems} itens</S.SummaryItems>
                     <S.SummaryTotal>{locatedPrice}</S.SummaryTotal>
                 </S.SummaryInfo>
-                <S.CartButton>Comprar</S.CartButton>
+                <Button onClick={() => alert('Função ainda não implementada')}>Comprar</Button>
             </S.Summary>
             
         </S.CartContainer>

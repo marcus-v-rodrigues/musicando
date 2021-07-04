@@ -1,5 +1,3 @@
-//Style file
-
 import styled from 'styled-components'
 
 export const Title = styled.h1`
@@ -9,11 +7,15 @@ export const Title = styled.h1`
     font-size: 4em;
     font-family: 'Fredoka One';
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 700px) {
+        font-size: 3em;
+    }
+
+    @media screen and (max-width: 450px) {
         font-size: 2em;
     }
 `
-export const CartContainer = styled.div`
+export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -34,51 +36,30 @@ export const CartContainer = styled.div`
         padding: 0;
     }
 `
-export const Summary = styled.div`
+export const Panel = styled.div`
     display: flex;
     flex-grow: 0;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem;
     background: white;
     box-shadow: var(--shadow);
 
     width: 30%;
-    max-height: 20em;
+    max-height: 15em;
 
     @media screen and (max-width: 1000px) {
         margin-bottom: 3em;
         width: 100%;
     }
 `
-export const SummaryTitle = styled.h4`
+export const PanelTitle = styled.h4`
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
     text-align: center;
 `
-export const SummaryInfo = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-`
-export const SummaryItems = styled.span`
-    color: black;
-    font-size: 1.2em;
-    width: 100%;
-
-`
-export const SummaryTotal = styled.span`
-    color: black;
-    font-size: 1.5em;
-    font-weight: bold;
-    width: 100%;
-`
-
 export const Wrapper = styled.div`
     position: relative;
     display: flex;
@@ -86,11 +67,8 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     width: 60%;
 
-    @media screen and (max-width: 1000px) {
-        width: 100%;
-    }
-
     @media screen and (max-width: 600px) {
+        width: 100%;
         padding: 1em;
     }
 

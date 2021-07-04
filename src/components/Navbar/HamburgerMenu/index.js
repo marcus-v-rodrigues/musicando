@@ -24,6 +24,18 @@ const HamburgerMenu = ({ className }) => {
     const [menuExpanded, setMenuExpanded] = useState(false)
 
     useEffect(()=>{
+        gsap.set(lineOne.current, {
+            top: "0%",
+            yPercent: 0
+        })
+        gsap.set(lineTwo.current, {
+            top: "50%",
+            yPercent: -50
+        })
+        gsap.set(lineThree.current, {
+            top: "100%",
+            yPercent: -100
+        })
 
         timeline.current = gsap.timeline({paused: true})
         .to(sidebar.current, {
@@ -32,9 +44,10 @@ const HamburgerMenu = ({ className }) => {
             ease: "power3"
         }, "0")
         .to(lineOne.current, {
+            top: "50%",
+            yPercent: -50,
             duration: 0.5,
             scaleX: 1.5,
-            top: "50%",
             rotation: 45,
             ease: "power3"
         }, "<")
@@ -44,10 +57,10 @@ const HamburgerMenu = ({ className }) => {
             ease: "power3"
         }, "<")
         .to(lineThree.current, {
+            top: "50%",
+            yPercent: -50,
             duration: 0.5,
             scaleX: 1.5,
-            bottom: null,
-            top: "50%",
             rotation: -45,
             ease: "power3",
         }, "<")
@@ -69,11 +82,11 @@ const HamburgerMenu = ({ className }) => {
 
     return (
         <S.Wrapper className={className}> {/*Using styled(Component) creates a class which is passed as a prop called className to the wrapped component.*/}
-            <S.ToggleBtn onClick={() => setMenuExpanded(!menuExpanded)}>
+            <S.HamburgerContainer onClick={() => setMenuExpanded(!menuExpanded)}>
                 <S.Top ref={lineOne}></S.Top>
                 <S.Middle ref={lineTwo}></S.Middle>
                 <S.Bottom ref={lineThree}></S.Bottom>
-            </S.ToggleBtn>
+            </S.HamburgerContainer>
             <S.Description>Menu</S.Description>
             <S.Sidebar ref={sidebar}>
                 <S.List>

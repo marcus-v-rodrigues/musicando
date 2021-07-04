@@ -18,8 +18,11 @@ import Login from './pages/Login'
 import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails'
 import Category from './pages/Category'
+import Admin from './pages/Admin'
+import Products from './pages/Admin/subpages/Products'
+import Users from './pages/Admin/subpages/Users'
 
-//import { connect } from "react-redux"
+import { connect } from "react-redux"
 
 const App = ({ current }) => {
   return (
@@ -30,7 +33,9 @@ const App = ({ current }) => {
                     <Route exact path="/" component={ Main } />
                     <Route path="/login" component={ Login } />
                     <Route path="/cart" component={ Cart } />
-                    <Route path="/product/:id" component={ ProductDetails }/>
+                    <Route exact path="/admin" component={ Admin }/>
+                    <Route path="/admin/products" component={ Products }/>
+                    <Route path="/admin/users" component={ Users }/>
                     <Route path="/accessory" render={() => (<Category category={'Acessórios'} />)} />
                     <Route path="/audio" render={() => (<Category category={'Áudio'} />)} />
                     <Route path="/string" render={() => (<Category category={'Cordas'} />)} />
@@ -38,6 +43,12 @@ const App = ({ current }) => {
                     <Route path="/keyboard" render={() => (<Category category={'Teclas'} />)} />
                     <Route path="/wind" render={() => (<Category category={'Sopro'} />)} />
                     <Route path="/piano" render={() => (<Category category={'Piano'} />)} />
+
+                    {!current ? (
+                      <Redirect to="/" />
+                    ) : (
+                      <Route exact path="/product/:id" component={ ProductDetails }/>
+                    )}
                 </Switch>
             </Layout>
         </BrowserRouter>
@@ -45,4 +56,10 @@ const App = ({ current }) => {
   )
 }
 
-export default App
+const mapStateToProps = (state) => {
+  return {
+    current: state.shop.currentItem,
+  }
+}
+
+export default connect(mapStateToProps)(App)

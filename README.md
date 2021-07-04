@@ -88,7 +88,7 @@ _ou_
 ```bash
 yarn run start
 ```
-**The application will start in your browser, by default it will be in:**
+**To the application start in your browser, by default you must access:**
 
 http://localhost:3000/
 

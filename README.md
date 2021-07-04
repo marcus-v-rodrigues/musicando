@@ -98,7 +98,7 @@ http://localhost:3000/
 # Automated Testing
 
 In order to test our application functionality, we developed a script to help you out in this task.
-All you have to do is install python 3, firefox, [firefox driver](https://github.com/mozilla/geckodriver/releases), chrome and [chrome driver](https://chromedriver.storage.googleapis.com/) in your machine.
+All you have to do is install python, Selenium, your favourite browser and its web driver in your machine.
 
 The application must be running before the automatic test execution!
 

@@ -1,7 +1,17 @@
 {
   "name": "musicando",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "yarn run start --prefix frontend",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+  },
   "repository": "https://github.com/marcus-v-rodrigues/musicando.git",
   "author": "marcus-v-rodrigues <marcus.v.rodrigues@outlook.com>",
   "license": "MIT",

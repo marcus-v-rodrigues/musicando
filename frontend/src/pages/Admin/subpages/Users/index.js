@@ -6,8 +6,6 @@ import UsersItem from './UsersItem'
 
 import * as S from './styled'
 
-import users from 'data/users'
-
 const Users = () => {
     return (
         <PageContainer>
@@ -15,9 +13,9 @@ const Users = () => {
             
             <S.Container>
                 <S.Wrapper>
-                    {users.map((user) => (
+                    {/*users.map((user) => (
                         <UsersItem key={user.id} user={user} />
-                    ))}
+                    ))*/}
                 </S.Wrapper>
 
                 <S.Panel>

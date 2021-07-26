@@ -1,6 +1,6 @@
 import axios from 'axios'
 import * as product from '../constants/productConstants'
-import { logout } from './userActions'
+import { logout } from '../actions/userActions'
 
 export const listProducts = (keyword = '') => async (
   dispatch

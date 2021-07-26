@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PageContainer from '../../components/Layout/PageContainer'
 import ProductItem from '../../components/Product/ProductItem'
 import ProductWrapper from '../../components/Product/ProductWrapper'
@@ -8,31 +8,38 @@ import * as S from './styled'
 
 // Redux
 import { useDispatch, useSelector } from 'react-redux'
+import { listProductsCategory } from '../../redux/actions/productActions'
 
-const Category = ({ category, products }) => {
+const Category = ({ category }) => {
+
+    const dispatch = useDispatch()
+    const productList = useSelector((state) => state.productList)
+    const { loading, products, error } = productList
+
+    useEffect(() => {
+        dispatch(listProductsCategory(category))
+      }, [dispatch, category])
+
     return (
         <PageContainer>
             <S.Title>{category}</S.Title>
 
             <S.Wrapper>
-                <ProductWrapper>
-                    {products.map(product => (
-                        product.category === category &&
-                        <ProductItem 
-                            key={product.id} 
-                            product={product}
-                        />
-                    ))}
-                </ProductWrapper>
+                {loading ? <h2>Carregando...</h2> : error ? <h3>{error}</h3> : 
+                    <ProductWrapper>
+                        {products.map(product => (
+                            product.category === category &&
+                            <ProductItem 
+                                key={product.id} 
+                                product={product}
+                            />
+                        ))}
+                    </ProductWrapper>
+                }
             </S.Wrapper>
         </PageContainer>
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-      products: state.shop.products,
-    }
-}
 
-export default connect(mapStateToProps)(Category)
+export default Category

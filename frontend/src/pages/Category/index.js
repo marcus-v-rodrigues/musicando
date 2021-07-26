@@ -7,7 +7,7 @@ import * as S from './styled'
 //import products from '../../data/products'
 
 // Redux
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Category = ({ category, products }) => {
     return (

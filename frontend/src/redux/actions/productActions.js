@@ -2,14 +2,14 @@ import axios from 'axios'
 import * as product from '../constants/productConstants'
 import { logout } from './userActions'
 
-export const listProducts = (keyword = '', pageNumber = '') => async (
+export const listProducts = (keyword = '') => async (
   dispatch
 ) => {
   try {
     dispatch({ type: product.PRODUCT_LIST_REQUEST })
 
     const { data } = await axios.get(
-      `/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+      `/api/products?keyword=${keyword}`
     )
 
     dispatch({
@@ -34,7 +34,7 @@ export const listProductsCategory = ( category = '' ) => async (
     dispatch({ type: product.PRODUCT_CATEGORY_REQUEST })
 
     const { data } = await axios.get(
-      `/api/products/category/${category}`
+      `/api/products/category?category=${category}`
     )
 
     dispatch({

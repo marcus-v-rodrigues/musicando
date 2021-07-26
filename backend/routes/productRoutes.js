@@ -20,6 +20,6 @@ router
   .get(getProductById)
   .delete(protect, admin, deleteProduct)
   .put(protect, admin, updateProduct)
-router.route('/category/:id').get(getProductsByCategory)
+router.route('/category').get(getProductsByCategory)
 
 export default router

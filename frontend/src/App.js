@@ -4,7 +4,7 @@
 import { 
   BrowserRouter,
   Switch,
-  Route,
+  Route
 } from 'react-router-dom' //React library to have multiple pages
 
 import Layout from './components/Layout' //General component with Navbar and Footer

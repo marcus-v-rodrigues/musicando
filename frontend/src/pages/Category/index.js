@@ -25,17 +25,20 @@ const Category = ({ category }) => {
             <S.Title>{category}</S.Title>
 
             <S.Wrapper>
-                {loading ? <h2>Carregando...</h2> : error ? <h3>{error}</h3> : 
+                {loading ? (
+                <h2>Carregando...</h2>
+                ) : error ? (
+                <h3>{error}</h3>
+                ) : (
                     <ProductWrapper>
                         {products.map(product => (
-                            product.category === category &&
                             <ProductItem 
-                                key={product.id} 
+                                key={product._id} 
                                 product={product}
                             />
                         ))}
                     </ProductWrapper>
-                }
+                )}
             </S.Wrapper>
         </PageContainer>
     )

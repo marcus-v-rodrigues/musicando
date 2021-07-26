@@ -39,6 +39,20 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 })
 
+// @desc    Fetch single product
+// @route   GET /api/products/:id
+// @access  Public
+const getProductsByCategory = asyncHandler(async (req, res) => {
+  const products = await Product.find({category: req.params.id})
+
+  if (products) {
+    res.json(products)
+  } else {
+    res.status(404)
+    throw new Error('Product not found')
+  }
+})
+
 // @desc    Delete a product
 // @route   DELETE /api/products/:id
 // @access  Private/Admin

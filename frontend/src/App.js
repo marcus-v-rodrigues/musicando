@@ -21,9 +21,7 @@ import Admin from './pages/Admin'
 import Products from './pages/Admin/subpages/Products'
 import Users from './pages/Admin/subpages/Users'
 
-import { connect } from "react-redux"
-
-const App = ({ current }) => {
+const App = () => {
   return (
     <>
         <BrowserRouter>
@@ -50,10 +48,5 @@ const App = ({ current }) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    current: state.shop.currentItem,
-  }
-}
 
-export default connect(mapStateToProps)(App)
+export default App

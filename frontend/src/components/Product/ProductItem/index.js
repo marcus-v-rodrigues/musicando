@@ -5,7 +5,7 @@ import * as S from "./styled"
 import { connect } from "react-redux"
 import {
   loadCurrentItem,
-} from "../../../redux/Shopping/shopping-actions"
+} from "../../../redux/actions/cartActions"
 
 const ProductItem = ({ product, loadCurrentItem }) => {
 

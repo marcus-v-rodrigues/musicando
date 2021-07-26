@@ -7,7 +7,7 @@ import { Button } from '../../components/Button'
 import { connect } from 'react-redux'
 import {
   addToCart,
-} from '../../redux/Shopping/shopping-actions'
+} from '../../redux/actions/cartActions'
 
 import * as S from './styled'
 

@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import {
     adjustItemQuantity,
     removeFromCart,
-  } from '../../../redux/Shopping/shopping-actions'
+  } from '../../../redux/actions/cartActions'
 
 const CartItem = ({ item, adjustQuantity, removeFromCart }) => {
 

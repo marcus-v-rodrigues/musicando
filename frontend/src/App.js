@@ -14,6 +14,7 @@ import './styles/App.css' //import fonts
 //Pages
 import Main from './pages/Main'
 import Login from './pages/Login'
+import Register from './pages/Login/Register'
 import Cart from './pages/Cart'
 import ProductDetails from './pages/ProductDetails'
 import Category from './pages/Category'
@@ -28,7 +29,8 @@ const App = () => {
             <Layout>
                 <Switch>
                     <Route exact path="/" component={ Main } />
-                    <Route path="/login" render={routeProps => (<Login {...routeProps} />)}/>                    
+                    <Route path="/login" render={routeProps => (<Login {...routeProps} />)}/>  
+                    <Route path="/register" render={routeProps => (<Register {...routeProps} />)}/>                    
                     <Route path="/cart/:id?" component={ Cart } />
                     <Route exact path="/admin" component={ Admin }/>
                     <Route path="/admin/products" component={ Products }/>

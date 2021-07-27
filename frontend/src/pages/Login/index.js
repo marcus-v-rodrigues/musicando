@@ -68,14 +68,13 @@ const Login = ({ location, history }) => {
                     </S.FormGroup>
 
                     <S.LoginWrapper>
-                        {/*
+                    
                         <S.RegisterWrapper>
                         Novo cliente?{'   '}
                             <S.RegisterLink to={'/register'}>
                                 Registre-se
                             </S.RegisterLink>
                         </S.RegisterWrapper> 
-                        */}
 
                         <S.Button type='submit'>Entrar</S.Button>
                     </S.LoginWrapper>

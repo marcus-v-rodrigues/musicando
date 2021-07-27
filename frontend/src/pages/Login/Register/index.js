@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import PageContainer from '../../components/Layout/PageContainer'
+import PageContainer from '../../../components/Layout/PageContainer'
 import Alert from '../../../components/Alert'
-import * as S from './styled'
+import * as S from '../styled'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { register } from '../../redux/actions/userActions'
+import { register } from '../../../redux/actions/userActions'
 
 const Register = ({ location, history }) => {
 
@@ -101,7 +101,7 @@ const Register = ({ location, history }) => {
                     </S.FormGroup>
 
                     <S.LoginWrapper>
-                        <S.Button type='submit'>Entrar</S.Button>
+                        <S.Button type='submit'>Registrar</S.Button>
                     </S.LoginWrapper>
 
                 </S.FormWrapper>

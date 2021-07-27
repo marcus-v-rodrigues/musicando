@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Hero from './sections/Hero'
 import Spotlight from './sections/Spotlight'
@@ -7,10 +7,20 @@ import Image from '../../components/Image'
 //import products from '../../data/products'
 
 // Redux
-import { connect } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { listProducts } from '../../redux/actions/productActions'
 
-const Main = ({ products }) => {
-  const isNew = product => product.id >= 19
+const Main = () => {
+
+  const dispatch = useDispatch()
+  const productList = useSelector((state) => state.productList)
+  const { products } = productList
+
+  useEffect(() => {
+      dispatch(listProducts())
+    }, [dispatch])
+
+  const isNew = product => product.category === 'Teclas'
   const novidades = products.filter(isNew)
 
   const isGood = product => product.category === 'Cordas'
@@ -26,10 +36,4 @@ const Main = ({ products }) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    products: state.shop.products,
-  }
-}
-
-export default connect(mapStateToProps)(Main)
+export default Main

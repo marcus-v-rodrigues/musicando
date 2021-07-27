@@ -1,40 +1,81 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PageContainer from '../../components/Layout/PageContainer'
 import * as S from './styled'
 
-const Login = () => {
-  return (
-    <PageContainer>
-        <S.Title>Login</S.Title>
-        <S.FormBackground>
-            <S.FormWrapper>
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from '../../redux/actions/userActions'
 
-                <S.FormGroup>
-                    <S.Label for="email">
-                        Email
-                    <S.Field type="email" name="email" id="email"  placeholder="email@dominio.com" />
-                    </S.Label>
-                </S.FormGroup>
+const Login = ({ location, history }) => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-                <S.FormGroup>
-                    <S.Label for="password">
-                        Senha
-                    <S.Field type="password" name="password" id="password" placeholder="Sua senha" />
-                    </S.Label>
-                </S.FormGroup>
+    const dispatch = useDispatch()
 
-                <S.LoginWrapper>
-                    <S.ForgotPassword href='#'>
-                            Esqueceu sua senha?
-                    </S.ForgotPassword>
+    const userLogin = useSelector((state) => state.userLogin)
+    const { loading, error, userInfo } = userLogin
 
-                    <S.Button to='/admin'>Entrar</S.Button>
-                </S.LoginWrapper>
+    const redirect = location.search ? location.search.split('=')[1] : '/'
 
-            </S.FormWrapper>
-        </S.FormBackground>
-    </PageContainer>
-  )
-}
+    useEffect(() => {
+        if (userInfo) {
+        history.push(redirect)
+        }
+    }, [history, userInfo, redirect])
+
+    const submitHandler = (e) => {
+        e.preventDefault()
+        dispatch(login(email, password))
+    }
+
+    return (
+        <PageContainer>
+            <S.Title>Login</S.Title>
+            <S.FormBackground>
+                <S.FormWrapper onSubmit={submitHandler}>
+
+                    <S.FormGroup>
+                        <S.Label for="email">
+                            Email
+                        <S.Field 
+                            type="email" 
+                            name="email" 
+                            id="email"  
+                            placeholder="email@dominio.com" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        </S.Label>
+                    </S.FormGroup>
+
+                    <S.FormGroup>
+                        <S.Label for="password">
+                            Senha
+                        <S.Field 
+                            type="password" 
+                            name="password" 
+                            id="password" 
+                            placeholder="Sua senha" 
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        </S.Label>
+                    </S.FormGroup>
+
+                    <S.LoginWrapper>
+                        <S.RegisterWrapper href='#'>
+                        Novo cliente?{' '}
+                            <S.RegisterLink to={redirect ? `/register?redirect=${redirect}` : '/register'}>
+                                Register
+                            </S.RegisterLink>
+                        </S.RegisterWrapper>
+
+                        <S.Button type='submit'>Entrar</S.Button>
+                    </S.LoginWrapper>
+
+                </S.FormWrapper>
+            </S.FormBackground>
+        </PageContainer>
+    )
+    }
 
 export default Login

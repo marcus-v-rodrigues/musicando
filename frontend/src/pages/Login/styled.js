@@ -24,7 +24,7 @@ export const FormBackground = styled.div`
 	box-shadow:var(--shadow);
 `
 
-export const FormWrapper = styled.div`
+export const FormWrapper = styled.form`
 	position: absolute;
     display: flex;
     flex-direction: column;
@@ -68,8 +68,12 @@ export const LoginWrapper = styled.div`
     width: 100%; 
     margin-top: auto;
 `
+export const RegisterWrapper = styled.div`
+    position: relative;
+    display: flex;
+`
 
-export const ForgotPassword = styled.a`
+export const RegisterLink = styled(NavLink)`
     color: white;
     font-size: 1.3em;
     text-decoration: none;

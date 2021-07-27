@@ -46,13 +46,16 @@ const Navbar = () => {
           ))}
         </S.MenuWrapper>
 
-        <S.RightWrapper>
+        <S.RightWrapper userInfo={userInfo}>
             <S.Cart to={'/cart'}>
                 <S.CartImage/>
                 <S.CartCounter>{cartCount}</S.CartCounter>
             </S.Cart>
             {userInfo ? (
-              <Button onClick={logoutHandler}>Logout</Button>
+              <>
+                <S.NameUser>{userInfo.name}</S.NameUser>
+                <Button onClick={logoutHandler}>Logout</Button>
+              </>
             ) : (
               <ButtonLink to={'/login'}>Entrar</ButtonLink>
             )}

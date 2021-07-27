@@ -105,6 +105,10 @@ export const RightWrapper = styled.div`
     @media screen and (max-width: 1300px){
         display: none;
     }
+
+    @media screen and (max-width: 1400px){
+        width: ${props => props.userInfo ? '25%' : '20%'};
+    }
 `
 
 export const Cart = styled(NavLink)`
@@ -189,6 +193,14 @@ export const Menu = styled(HamburgerMenu)`
     @media screen and (max-width: 800px){
         font-size: 0.9em;
     }
+`
+
+export const NameUser = styled.div`
+    max-width: 3em;
+    margin: 0 0.5em;
+    position: relative;
+    font-size: 1.1em;
+    font-weight: bold;
 `
 /*
 export const SearchForm = styled.form`

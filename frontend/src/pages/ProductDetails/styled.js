@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 
     @media screen and (max-width: 400px) {
         width: 100%;
-        padding: 1em 0;
+        padding: 1em 0.5em;
     }
 ` 
 
@@ -59,6 +59,7 @@ export const Text = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 0.5em;
     align-items: flex-end;
     text-align: right;
     width: 100%;
@@ -76,16 +77,23 @@ export const ProductName = styled.div`
     word-break: break-word;
     width: 100%;
 
+    @media only screen and (max-width: 600px) {
+        font-size: 1.4em;
+    }
 `
 export const ProductPrice = styled.span`
     color: black;
     font-size: 4em;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 2em;
+    }
 `
 
 export const ProductDescription = styled.div`
     color: black;
     font-size: 1em;
     word-break: break-word;
+    text-align: justify;
     width: 100%;
-
 `

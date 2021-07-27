@@ -4,9 +4,25 @@ import PageContainer from '../../components/Layout/PageContainer'
 import CartItem from './CartItem'
 import * as S from './styled'
 
-import { connect } from 'react-redux'
+import { addToCart } from '../../redux/actions/cartActions'
+import { useDispatch, useSelector } from 'react-redux'
 
-const Cart = ({ cart }) => {
+const Cart = ({ match, location, history }) => {
+
+    const productId = match.params.id
+
+    const quantity = location.search ? Number(location.search.split('=')[1]) : 1
+
+    const dispatch = useDispatch()
+
+    const cart = useSelector((state) => state.cart)
+    const { cartItems } = cart
+
+    useEffect(() => {
+        if (productId) {
+          dispatch(addToCart(productId, quantity))
+        }
+    }, [dispatch, productId, quantity])
 
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalItems, setTotalItems] = useState(0)
@@ -15,14 +31,14 @@ const Cart = ({ cart }) => {
         let items = 0
         let price = 0
 
-        cart.forEach((item) => {
+        cartItems.forEach((item) => {
         items += item.quantity
         price += item.quantity * item.price
         })
 
         setTotalItems(items)
         setTotalPrice(price)
-    }, [cart, totalPrice, totalItems, setTotalPrice, setTotalItems])
+    }, [cartItems, totalPrice, totalItems, setTotalPrice, setTotalItems])
 
     let locatedPrice = totalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
@@ -32,7 +48,7 @@ const Cart = ({ cart }) => {
         <S.CartContainer>
 
             <S.Wrapper>
-                {cart.map((item) => (
+                {cartItems.map((item) => (
                     <CartItem key={item.id} item={item} />
                 ))}
             </S.Wrapper>
@@ -50,11 +66,5 @@ const Cart = ({ cart }) => {
     </PageContainer>
   )
 }
-
-const mapStateToProps = (state) => {
-    return {
-      cart: state.shop.cart,
-    }
-  }
   
-  export default connect(mapStateToProps)(Cart)
+  export default Cart

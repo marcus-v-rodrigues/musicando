@@ -9,7 +9,7 @@ import { listProductDetails } from '../../redux/actions/productActions'
 
 import * as S from './styled'
 
-const ProductDetails = ({ match }) => {
+const ProductDetails = ({ history, match }) => {
 
   const dispatch = useDispatch()
 
@@ -25,6 +25,10 @@ const ProductDetails = ({ match }) => {
     setPrice(new Intl.NumberFormat('pt-br',{style: 'currency', currency: 'BRL'}).format(product.price))
     
   }, [dispatch, match, product.price])
+
+  const addToCartHandler = () => {
+    history.push(`/cart/${match.params.id}?quantity=${quantity}`)
+  }
 
     return (
         <PageContainer>
@@ -61,7 +65,12 @@ const ProductDetails = ({ match }) => {
                         <S.ProductStock>{product.countInStock > 0 ? 'Em estoque' : 'Fora de estoque'}</S.ProductStock>
 
                       </S.ActionWrapper>
-                      <Button>Adicionar ao carrinho</Button>
+                      <Button 
+                        onClick={addToCartHandler}
+                        disabled={product.countInStock === 0}
+                      >
+                        Adicionar ao carrinho
+                      </Button>
                   </S.Text>
 
                   </S.Content>

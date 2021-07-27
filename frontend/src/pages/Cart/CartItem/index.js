@@ -2,22 +2,19 @@ import React, { useState } from 'react'
 import * as S from './styled'
 
 import { Button } from 'components/Button'
-import { connect } from 'react-redux'
 
-import {
-    adjustItemQuantity,
-    removeFromCart,
-  } from '../../../redux/actions/cartActions'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart, removeFromCart } from '../../../redux/actions/cartActions'
 
-const CartItem = ({ item, adjustQuantity, removeFromCart }) => {
+const CartItem = ({ item }) => {
 
-    const [input, setInput] = useState(item.quantity)
+    const dispatch = useDispatch()
 
-    const onChangeHandler = (e) => {
-        setInput(e.target.value)
-        adjustQuantity(item.id, e.target.value)
-    };
     const locatedPrice = item.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+
+    const removeFromCartHandler = (id) => {
+        dispatch(removeFromCart(id))
+    }
 
     return (
         <S.Wrapper>
@@ -37,15 +34,16 @@ const CartItem = ({ item, adjustQuantity, removeFromCart }) => {
                     <S.ItemQuantity>
                         <label htmlFor="quantity">Quantidade</label>
                         <S.InputQuantity
-                            min="1"
+                            max={item.countInStock}
+                            min={1}
                             type="number"
                             id="quantity"
                             name="quantity"
-                            value={input}
-                            onChange={onChangeHandler}
+                            value={item.quantity}
+                            onChange={(e) => dispatch(addToCart(item.product, Number(e.target.value)))}
                         />
                     </S.ItemQuantity>
-                    <Button onClick={() => removeFromCart(item.id)}>Remover</Button>
+                    <Button onClick={() => removeFromCartHandler(item.product)}>Remover</Button>
                 </S.Actions>
 
             </S.Content>
@@ -54,11 +52,4 @@ const CartItem = ({ item, adjustQuantity, removeFromCart }) => {
     )
 }
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-      adjustQuantity: (id, value) => dispatch(adjustItemQuantity(id, value)),
-      removeFromCart: (id) => dispatch(removeFromCart(id)),
-    }
-  }
-
-export default connect(null, mapDispatchToProps)(CartItem)
+export default CartItem

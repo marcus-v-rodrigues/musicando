@@ -1,36 +1,47 @@
-import * as actionTypes from "../constants/cartConstants";
+import axios from 'axios'
+import * as cart from '../constants/cartConstants'
 
-export const addToCart = (itemID) => {
-  return {
-    type: actionTypes.ADD_TO_CART,
-    payload: {
-      id: itemID,
-    },
-  };
-};
+export const addToCart = (id, quantity) => async (dispatch, getState) => {
+  const { data } = await axios.get(`/api/products/item/${id}`)
 
-export const removeFromCart = (itemID) => {
-  return {
-    type: actionTypes.REMOVE_FROM_CART,
+  dispatch({
+    type: cart.CART_ADD_ITEM,
     payload: {
-      id: itemID,
-    },
-  };
-};
-
-export const adjustItemQuantity = (itemID, quantity) => {
-  return {
-    type: actionTypes.ADJUST_ITEM_QUANTITY,
-    payload: {
-      id: itemID,
+      product: data._id,
+      name: data.name,
+      image: data.image,
+      price: data.price,
+      countInStock: data.countInStock,
       quantity,
     },
-  };
-};
+  })
 
-export const loadCurrentItem = (item) => {
-  return {
-    type: actionTypes.LOAD_CURRENT_ITEM,
-    payload: item,
-  };
-};
+  localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+}
+
+export const removeFromCart = (id) => (dispatch, getState) => {
+  dispatch({
+    type: cart.CART_REMOVE_ITEM,
+    payload: id,
+  })
+
+  localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+}
+
+export const saveShippingAddress = (data) => (dispatch) => {
+  dispatch({
+    type: cart.CART_SAVE_SHIPPING_ADDRESS,
+    payload: data,
+  })
+
+  localStorage.setItem('shippingAddress', JSON.stringify(data))
+}
+
+export const savePaymentMethod = (data) => (dispatch) => {
+  dispatch({
+    type: cart.CART_SAVE_PAYMENT_METHOD,
+    payload: data,
+  })
+
+  localStorage.setItem('paymentMethod', JSON.stringify(data))
+}

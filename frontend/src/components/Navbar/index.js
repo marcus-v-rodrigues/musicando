@@ -6,20 +6,23 @@ import * as S from "./styled"
 
 import links from './links'
 
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 
-const Navbar = ({ cart }) => {
+const Navbar = () => {
+
+  const cart = useSelector((state) => state.cart)
+  const { cartItems } = cart
 
   const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
     let count = 0;
-    cart.forEach((item) => {
+    cartItems.forEach((item) => {
       count += item.quantity
     })
 
     setCartCount(count)
-  }, [cart, cartCount])
+  }, [cartItems, cartCount])
 
   return (
     <S.Navbar>
@@ -53,10 +56,4 @@ const Navbar = ({ cart }) => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    cart: state.shop.cart,
-  }
-}
-
-export default connect(mapStateToProps)(Navbar)
+export default Navbar

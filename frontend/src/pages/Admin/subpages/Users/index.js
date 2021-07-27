@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import { Button } from 'components/Button'
+import { ButtonLink } from 'components/Button'
 import Alert from '../../../../components/Alert'
 import PageContainer from 'components/Layout/PageContainer'
 import UsersItem from './UsersItem'
@@ -50,7 +50,7 @@ const Users = ({ history }) => {
 
                 <S.Panel>
                     <S.PanelTitle>Cadastrar novo usuário</S.PanelTitle>
-                    <Button onClick={() => alert('Função ainda não implementada')}>Cadastrar</Button>
+                    <ButtonLink to={'/register'}>Cadastrar</ButtonLink>
                 </S.Panel>
             </S.Container>
         </PageContainer>

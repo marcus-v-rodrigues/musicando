@@ -65,18 +65,11 @@ export const Content = styled.div`
 export const Details = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 2em;
 
     @media screen and (max-width: 1300px) {
         align-items: center;
     }
-`
-export const ItemName = styled.span`
-    color: black;
-    font-size: 2em;
-    word-break: break-word;
-    width: 100%;
-
 `
 export const ItemInfo = styled.span`
     color: black;

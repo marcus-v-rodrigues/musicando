@@ -36,7 +36,7 @@ const {
 useEffect(() => {
   if (successUpdate) {
     dispatch({ type: PRODUCT_UPDATE_RESET })
-    history.push('/admin/productlist')
+    history.push('/admin/products')
   } else {
     if (!product.name || product._id !== productId) {
       dispatch(listProductDetails(productId))
@@ -157,7 +157,7 @@ const submitHandler = (e) => {
                     <S.FormGroup>
                         <S.Label htmlFor="category">
                             Categoria
-                            <S.SelectField value={category} onChange={(e) => setName(e.target.value)}>
+                            <S.SelectField value={category} onChange={(e) => setCategory(e.target.value)}>
                                 <option value="Acessórios">Acessórios</option>
                                 <option value="Áudio">Áudio</option>
                                 <option value="Cordas">Cordas</option>

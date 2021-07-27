@@ -156,6 +156,8 @@ export const updateProduct = (product) => async (dispatch, getState) => {
       userLogin: { userInfo },
     } = getState()
 
+    console.log(product)
+
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -164,7 +166,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-      `/api/products/${product._id}`,
+      `/api/products/item/${product._id}`,
       product,
       config
     )

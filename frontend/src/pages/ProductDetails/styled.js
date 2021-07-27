@@ -81,3 +81,11 @@ export const ProductPrice = styled.span`
     color: black;
     font-size: 4em;
 `
+
+export const ProductDescription = styled.div`
+    color: black;
+    font-size: 1em;
+    word-break: break-word;
+    width: 100%;
+
+`

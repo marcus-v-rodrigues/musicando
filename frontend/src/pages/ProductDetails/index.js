@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import PageContainer from '../../components/Layout/PageContainer'
 import { Button } from '../../components/Button'
@@ -16,9 +16,14 @@ const ProductDetails = ({ match }) => {
   const productDetails = useSelector((state) => state.productDetails)
   const { loading, error, product } = productDetails
 
+  const [price, setPrice] = useState(0)
+
   useEffect(() => {
-    dispatch(listProductDetails(match.params.id))
-  }, [dispatch, match])
+    dispatch(listProductDetails(match.params.id));
+    
+    setPrice(new Intl.NumberFormat('pt-br',{style: 'currency', currency: 'BRL'}).format(product.price))
+    
+  }, [dispatch, match, product.price])
 
     return (
         <PageContainer>
@@ -36,7 +41,8 @@ const ProductDetails = ({ match }) => {
 
                   <S.Text>
                       <S.ProductName>{product.name}</S.ProductName>
-                      <S.ProductPrice>{product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</S.ProductPrice>
+                      <S.ProductPrice>{price}</S.ProductPrice>
+                      <S.ProductDescription>{product.description}</S.ProductDescription>
                       <Button>Adicionar ao carrinho</Button>
                   </S.Text>
 

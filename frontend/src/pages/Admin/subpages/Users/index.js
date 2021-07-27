@@ -29,10 +29,10 @@ const Users = ({ history }) => {
         } else {
             history.push('/')
         }
-    }, [dispatch, history, userInfo])
+    }, [dispatch, history, userInfo, successDelete])
 
     const deleteHandler = (id) => {
-        if (window.confirm('Are you sure')) {
+        if (window.confirm('Tem certeza?')) {
           dispatch(deleteUser(id))
         }
       }
@@ -44,7 +44,7 @@ const Users = ({ history }) => {
             <S.Container>
                 <S.Wrapper>
                     {users && users.map((user) => (
-                        <UsersItem key={user._id} user={user} />
+                        <UsersItem onDelete={() => deleteHandler(user._id)} key={user._id} user={user} />
                     ))}
                 </S.Wrapper>
 

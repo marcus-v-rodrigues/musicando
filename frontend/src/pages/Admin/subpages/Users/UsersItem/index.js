@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import * as S from './styled'
 
-const UsersItem = ({ user }) => {
+const UsersItem = ({ user, onDelete }) => {
 
     return (
         <S.Wrapper>
@@ -30,7 +30,7 @@ const UsersItem = ({ user }) => {
                 </S.Details>
 
                 <S.Actions>
-                    <Button onClick={() => alert('Função ainda não implementada')}>Remover</Button>
+                    <Button onClick={onDelete}>Remover</Button>
                     <Button onClick={() => alert('Função ainda não implementada')}>Editar</Button>
                 </S.Actions>
 

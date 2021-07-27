@@ -2,17 +2,13 @@ import React from 'react'
 import * as S from "./styled"
 
 // Redux
-import { connect } from "react-redux"
-import {
-  loadCurrentItem,
-} from "../../../redux/actions/cartActions"
 
-const ProductItem = ({ product, loadCurrentItem }) => {
+const ProductItem = ({ product }) => {
 
     const locatedPrice = product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
     return (
-      <S.Item to={`product/${product.id}`} onClick={() => loadCurrentItem(product)}>
+      <S.Item to={`product/${product._id}`}>
         <S.ItemBackground>
             <S.ItemImage image={product.image}/>
         </S.ItemBackground>
@@ -22,10 +18,4 @@ const ProductItem = ({ product, loadCurrentItem }) => {
     )
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    loadCurrentItem: (item) => dispatch(loadCurrentItem(item)),
-  }
-}
-
-export default connect(null, mapDispatchToProps)(ProductItem)
+export default ProductItem

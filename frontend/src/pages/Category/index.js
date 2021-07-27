@@ -13,12 +13,12 @@ import { listProductsCategory } from '../../redux/actions/productActions'
 const Category = ({ category }) => {
 
     const dispatch = useDispatch()
-    const productList = useSelector((state) => state.productList)
-    const { loading, products, error } = productList
+    const productCategory = useSelector((state) => state.productCategory)
+    const { loading, products, error } = productCategory
 
     useEffect(() => {
         dispatch(listProductsCategory(category))
-      }, [dispatch, category])
+      }, [category, dispatch])
 
     return (
         <PageContainer>

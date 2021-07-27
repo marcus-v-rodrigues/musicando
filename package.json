@@ -4,7 +4,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon backend/server",
+    "server": "nodemon backend/server --ignore client",
     "client": "yarn --cwd ./frontend/ start",
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
     "data:import": "node backend/seeder",

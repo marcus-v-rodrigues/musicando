@@ -35,13 +35,13 @@ const getProductById = asyncHandler(async (req, res) => {
 })
 
 // @desc    Fetch all product
-// @route   GET /api/products/category
+// @route   POST /api/products/category
 // @access  Public
 const getProductsByCategory = asyncHandler(async (req, res) => {
 
   const category = req.query.category
 
-  const products = await Product.find({category})
+  const products = await Product.find({ category: category }).exec()
 
   if (products) {
     res.json(products)

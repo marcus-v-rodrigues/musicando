@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import PageContainer from '../../../components/Layout/PageContainer'
-import Alert from '../../../components/Alert'
-import * as S from '../styled'
+import PageContainer from 'components/Layout/PageContainer'
+import Alert from 'components/Alert'
+import * as S from 'pages/Login/styled'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserDetails, updateUser } from 'redux/actions/userActions'
 import * as userConstants from 'redux/constants/userConstants'
 
-const Edit = ({ match, history }) => {
+const UserEdit = ({ match, history }) => {
 
     const userId = match.params.id
 
@@ -107,4 +107,4 @@ const Edit = ({ match, history }) => {
     )
 }
 
-export default Edit
+export default UserEdit

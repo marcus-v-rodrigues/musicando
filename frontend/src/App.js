@@ -21,7 +21,8 @@ import Category from './pages/Category'
 import Admin from './pages/Admin'
 import Products from './pages/Admin/subpages/Products'
 import Users from './pages/Admin/subpages/Users'
-import Edit from './pages/Login/Edit'
+import UserEdit from './pages/Admin/subpages/Users/UserEdit'
+import ProductEdit from './pages/Admin/subpages/Products/ProductEdit'
 
 const App = () => {
   return (
@@ -36,7 +37,8 @@ const App = () => {
                     <Route exact path="/admin" component={ Admin }/>
                     <Route path="/admin/products" component={ Products }/>
                     <Route path="/admin/users" component={ Users }/>
-                    <Route path='/admin/user/:id/edit' component={Edit} />
+                    <Route path='/admin/user/:id/edit' component={UserEdit} />
+                    <Route path='/admin/product/:id/edit' component={ProductEdit} />
                     <Route path="/accessory" render={() => (<Category category={'Acessórios'} />)} />
                     <Route path="/audio" render={() => (<Category category={'Áudio'} />)} />
                     <Route path="/string" render={() => (<Category category={'Cordas'} />)} />

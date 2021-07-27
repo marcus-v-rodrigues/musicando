@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button } from 'components/Button'
+import { Button, ButtonLink } from 'components/Button'
 
 import * as S from './styled'
 
@@ -27,7 +27,7 @@ const ProductsItem = ({ product, onDelete }) => {
 
                 <S.Actions>
                     <Button onClick={onDelete}>Remover</Button>
-                    <Button onClick={() => alert('Função ainda não implementada')}>Editar</Button>
+                    <ButtonLink to={`/admin/product/${product._id}/edit`} >Editar</ButtonLink>
                 </S.Actions>
 
             </S.Content>

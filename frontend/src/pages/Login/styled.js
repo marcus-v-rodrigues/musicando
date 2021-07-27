@@ -24,6 +24,19 @@ export const FormBackground = styled.div`
 	box-shadow:var(--shadow);
 `
 
+export const FormContainer = styled.form`
+	position:relative;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-width: 20em;
+	min-height: 40em;
+	
+	padding:5.5em 4em 3em 4em;
+	background:rgb(141, 104, 82);
+	box-shadow:var(--shadow);
+`
+
 export const FormWrapper = styled.form`
 	position: absolute;
     display: flex;
@@ -61,6 +74,10 @@ export const Field = styled.input`
 
 export const CheckField = styled(Field)`
     width: 3em;
+`
+
+export const SelectField = styled(Field).attrs({as: "select"})`
+
 `
 
 export const LoginWrapper = styled.div`

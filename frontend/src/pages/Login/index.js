@@ -12,7 +12,7 @@ const Login = ({ location, history }) => {
     const dispatch = useDispatch()
 
     const userLogin = useSelector((state) => state.userLogin)
-    const { loading, error, userInfo } = userLogin
+    const { error, userInfo } = userLogin
 
     const redirect = location.search ? location.search.split('=')[1] : '/'
 
@@ -24,17 +24,22 @@ const Login = ({ location, history }) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        dispatch(login(email, password))
+
+        if (email && password) {
+            // get return url from location state or default to home page
+            dispatch(login(email, password))
+        }
     }
 
     return (
         <PageContainer>
             <S.Title>Login</S.Title>
+            {error && <S.Title>{error}</S.Title>}
             <S.FormBackground>
-                <S.FormWrapper onSubmit={submitHandler}>
+                <S.FormWrapper name='form' onSubmit={submitHandler}>
 
                     <S.FormGroup>
-                        <S.Label for="email">
+                        <S.Label htmlFor="email">
                             Email
                         <S.Field 
                             type="email" 
@@ -48,7 +53,7 @@ const Login = ({ location, history }) => {
                     </S.FormGroup>
 
                     <S.FormGroup>
-                        <S.Label for="password">
+                        <S.Label htmlFor="password">
                             Senha
                         <S.Field 
                             type="password" 
@@ -62,12 +67,14 @@ const Login = ({ location, history }) => {
                     </S.FormGroup>
 
                     <S.LoginWrapper>
-                        <S.RegisterWrapper href='#'>
-                        Novo cliente?{' '}
-                            <S.RegisterLink to={redirect ? `/register?redirect=${redirect}` : '/register'}>
-                                Register
+                        {/*
+                        <S.RegisterWrapper>
+                        Novo cliente?{'   '}
+                            <S.RegisterLink to={'/register'}>
+                                Registre-se
                             </S.RegisterLink>
-                        </S.RegisterWrapper>
+                        </S.RegisterWrapper> 
+                        */}
 
                         <S.Button type='submit'>Entrar</S.Button>
                     </S.LoginWrapper>

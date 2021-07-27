@@ -71,16 +71,18 @@ export const LoginWrapper = styled.div`
 export const RegisterWrapper = styled.div`
     position: relative;
     display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 2em;
 `
 
 export const RegisterLink = styled(NavLink)`
     color: white;
     font-size: 1.3em;
     text-decoration: none;
-    margin-bottom: 2em;
 `
 
-export const Button = styled(NavLink)`
+export const Button = styled.button`
 
 	position: relative;
 	overflow: hidden;

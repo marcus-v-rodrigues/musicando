@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
-import { ButtonLink } from 'components/Button'
+import { ButtonLink, Button } from 'components/Button'
 
 import * as S from "./styled"
 
 import links from './links'
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../../redux/actions/userActions'
 
 const Navbar = () => {
 
@@ -24,6 +25,16 @@ const Navbar = () => {
     setCartCount(count)
   }, [cartItems, cartCount])
 
+
+  const dispatch = useDispatch()
+
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
+
+  const logoutHandler = () => {
+    dispatch(logout())
+  }
+
   return (
     <S.Navbar>
 
@@ -40,7 +51,12 @@ const Navbar = () => {
                 <S.CartImage/>
                 <S.CartCounter>{cartCount}</S.CartCounter>
             </S.Cart>
-            <ButtonLink to={'/login'}>Entrar</ButtonLink>
+            {userInfo ? (
+              <Button onClick={logoutHandler}>Logout</Button>
+            ) : (
+              <ButtonLink to={'/login'}>Entrar</ButtonLink>
+            )}
+            
         </S.RightWrapper>
         
         <S.MobileWrapper>

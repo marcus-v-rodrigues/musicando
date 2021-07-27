@@ -18,7 +18,7 @@ const Main = () => {
 
   useEffect(() => {
       dispatch(listProducts())
-    }, [dispatch])
+  }, [dispatch])
 
   const isNew = product => product.category === 'Teclas'
   const novidades = products.filter(isNew)

@@ -28,7 +28,7 @@ const App = () => {
             <Layout>
                 <Switch>
                     <Route exact path="/" component={ Main } />
-                    <Route path="/login" component={ Login } />
+                    <Route path="/login" render={routeProps => (<Login {...routeProps} />)}/>                    
                     <Route path="/cart/:id?" component={ Cart } />
                     <Route exact path="/admin" component={ Admin }/>
                     <Route path="/admin/products" component={ Products }/>

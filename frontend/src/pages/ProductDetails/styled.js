@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     flex-direction: column;
     max-width: 105em;
     width: 90%;
-	padding: 3em;
+	padding: 2em;
 	background: white;
     box-shadow: var(--shadow);
 
@@ -73,7 +73,7 @@ export const Text = styled.div`
 
 export const ProductName = styled.div`
     color: black;
-    font-size: 2em;
+    font-size: 1.7em;
     word-break: break-word;
     width: 100%;
 
@@ -83,11 +83,17 @@ export const ProductName = styled.div`
 `
 export const ProductPrice = styled.span`
     color: black;
-    font-size: 4em;
+    font-size: 3em;
 
     @media only screen and (max-width: 600px) {
         font-size: 2em;
     }
+`
+
+export const ProductStock = styled.span`
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
 `
 
 export const ProductDescription = styled.div`
@@ -96,4 +102,16 @@ export const ProductDescription = styled.div`
     word-break: break-word;
     text-align: justify;
     width: 100%;
+`
+
+export const ActionWrapper = styled.div`
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+`
+
+export const InputQuantity = styled.input`
+    font-size: 1.5em;
+    max-width: 3em;
 `

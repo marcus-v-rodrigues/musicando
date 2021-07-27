@@ -17,6 +17,7 @@ const ProductDetails = ({ match }) => {
   const { loading, error, product } = productDetails
 
   const [price, setPrice] = useState(0)
+  const [quantity, setQuantity] = useState(1)
 
   useEffect(() => {
     dispatch(listProductDetails(match.params.id));
@@ -43,6 +44,23 @@ const ProductDetails = ({ match }) => {
                       <S.ProductName>{product.name}</S.ProductName>
                       <S.ProductPrice>{price}</S.ProductPrice>
                       <S.ProductDescription>{product.description}</S.ProductDescription>
+                      <S.ActionWrapper>
+
+                        {product.countInStock > 0 && (
+         
+                            <S.InputQuantity
+                              value={quantity}
+                              onChange={(e) => setQuantity(e.target.value)}
+                              type="number"
+                              max={product.countInStock}
+                              min={1}
+                            >
+                            </S.InputQuantity>
+                        )}
+
+                        <S.ProductStock>{product.countInStock > 0 ? 'Em estoque' : 'Fora de estoque'}</S.ProductStock>
+
+                      </S.ActionWrapper>
                       <Button>Adicionar ao carrinho</Button>
                   </S.Text>
 

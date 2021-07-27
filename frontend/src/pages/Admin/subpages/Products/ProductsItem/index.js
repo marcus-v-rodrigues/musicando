@@ -4,7 +4,7 @@ import { Button } from 'components/Button'
 
 import * as S from './styled'
 
-const ProductsItem = ({ product }) => {
+const ProductsItem = ({ product, onDelete }) => {
 
     const locatedPrice = product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
 
@@ -26,7 +26,7 @@ const ProductsItem = ({ product }) => {
                 </S.Details>
 
                 <S.Actions>
-                    <Button onClick={() => alert('Função ainda não implementada')}>Remover</Button>
+                    <Button onClick={onDelete}>Remover</Button>
                     <Button onClick={() => alert('Função ainda não implementada')}>Editar</Button>
                 </S.Actions>
 

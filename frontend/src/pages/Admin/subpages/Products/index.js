@@ -61,7 +61,7 @@ const Products = ({ history, match }) => {
     ])
 
     const deleteHandler = (id) => {
-        if (window.confirm('Are you sure')) {
+        if (window.confirm('Tem certeza?')) {
         dispatch(deleteProduct(id))
         }
     }

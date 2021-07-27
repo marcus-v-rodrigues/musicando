@@ -6,7 +6,7 @@ import PageContainer from 'components/Layout/PageContainer'
 import UsersItem from './UsersItem'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { listUsers } from 'redux/actions/userActions'
+import { listUsers, deleteUser } from 'redux/actions/userActions'
 
 import * as S from './styled'
 
@@ -20,6 +20,9 @@ const Users = ({ history }) => {
     const userLogin = useSelector((state) => state.userLogin)
     const { userInfo } = userLogin
 
+    const userDelete = useSelector((state) => state.userDelete)
+    const { success: successDelete } = userDelete
+
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {
             dispatch(listUsers())
@@ -27,6 +30,12 @@ const Users = ({ history }) => {
             history.push('/')
         }
     }, [dispatch, history, userInfo])
+
+    const deleteHandler = (id) => {
+        if (window.confirm('Are you sure')) {
+          dispatch(deleteUser(id))
+        }
+      }
 
     return (
         <PageContainer>

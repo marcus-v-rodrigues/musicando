@@ -53,8 +53,17 @@ const Navbar = () => {
             </S.Cart>
             {userInfo ? (
               <>
-                <S.NameUser>{userInfo.name}</S.NameUser>
-                <Button onClick={logoutHandler}>Logout</Button>
+                {userInfo.isAdmin ? (
+                  <>
+                    <S.AdminLink to='/admin'>{userInfo.name}</S.AdminLink>
+                    <Button onClick={logoutHandler}>Logout</Button>
+                  </>
+                ) : (
+                  <>
+                    <S.NameUser>{userInfo.name}</S.NameUser>
+                    <Button onClick={logoutHandler}>Logout</Button>
+                  </>
+                )}
               </>
             ) : (
               <ButtonLink to={'/login'}>Entrar</ButtonLink>

@@ -202,6 +202,11 @@ export const NameUser = styled.div`
     font-size: 1.1em;
     font-weight: bold;
 `
+export const AdminLink = styled(NameUser).attrs({as: NavLink})`
+  text-decoration: none; 
+  color: black;
+`
+
 /*
 export const SearchForm = styled.form`
     display: flex;

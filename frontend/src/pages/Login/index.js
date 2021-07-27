@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PageContainer from '../../components/Layout/PageContainer'
+import Alert from '../../components/Alert'
 import * as S from './styled'
 
 import { useDispatch, useSelector } from 'react-redux'
@@ -34,7 +35,7 @@ const Login = ({ location, history }) => {
     return (
         <PageContainer>
             <S.Title>Login</S.Title>
-            {error && <S.Title>{error}</S.Title>}
+            {error && <Alert>{error}</Alert>}
             <S.FormBackground>
                 <S.FormWrapper name='form' onSubmit={submitHandler}>
 

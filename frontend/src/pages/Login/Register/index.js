@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PageContainer from '../../components/Layout/PageContainer'
+import Alert from '../../../components/Alert'
 import * as S from './styled'
 
 import { useDispatch, useSelector } from 'react-redux'
@@ -38,7 +39,8 @@ const Register = ({ location, history }) => {
     return (
         <PageContainer>
             <S.Title>Registrar</S.Title>
-            {error && <S.Title>{error}</S.Title>}
+            {error && <Alert>{error}</Alert>}
+            {message && <Alert>{message}</Alert>}
             <S.FormBackground>
                 <S.FormWrapper name='form' onSubmit={submitHandler}>
 

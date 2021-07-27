@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button } from 'components/Button'
+import { Button, ButtonLink } from 'components/Button'
 import { faCheckCircle, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -19,6 +19,7 @@ const UsersItem = ({ user, onDelete }) => {
 
                 <S.Details>
                     <S.ItemInfo>ID: {user._id}</S.ItemInfo>
+                    <S.ItemInfo>Nome: {user.name}</S.ItemInfo>
                     <S.ItemInfo>E-mail: {user.email}</S.ItemInfo>
                     <S.ItemInfo>
                         Admin: {user.isAdmin ? (
@@ -31,7 +32,7 @@ const UsersItem = ({ user, onDelete }) => {
 
                 <S.Actions>
                     <Button onClick={onDelete}>Remover</Button>
-                    <Button onClick={() => alert('Função ainda não implementada')}>Editar</Button>
+                    <ButtonLink to={`/admin/user/${user._id}/edit`} >Editar</ButtonLink>
                 </S.Actions>
 
             </S.Content>

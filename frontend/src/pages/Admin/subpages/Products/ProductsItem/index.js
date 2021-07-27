@@ -18,8 +18,8 @@ const ProductsItem = ({ product }) => {
             <S.Content>
 
                 <S.Details>
-                    <S.ItemName>{product.name}</S.ItemName>
                     <S.ItemInfo>ID: {product.id}</S.ItemInfo>
+                    <S.ItemInfo>Name: {product.name}</S.ItemInfo>
                     <S.ItemInfo>Category: {product.category}</S.ItemInfo>
                     <S.ItemInfo>Price: {locatedPrice}</S.ItemInfo>
                 </S.Details>

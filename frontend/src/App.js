@@ -21,6 +21,7 @@ import Category from './pages/Category'
 import Admin from './pages/Admin'
 import Products from './pages/Admin/subpages/Products'
 import Users from './pages/Admin/subpages/Users'
+import Edit from './pages/Login/Edit'
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
                     <Route exact path="/admin" component={ Admin }/>
                     <Route path="/admin/products" component={ Products }/>
                     <Route path="/admin/users" component={ Users }/>
+                    <Route path='/admin/user/:id/edit' component={Edit} />
                     <Route path="/accessory" render={() => (<Category category={'Acessórios'} />)} />
                     <Route path="/audio" render={() => (<Category category={'Áudio'} />)} />
                     <Route path="/string" render={() => (<Category category={'Cordas'} />)} />

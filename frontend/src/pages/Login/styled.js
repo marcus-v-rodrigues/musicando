@@ -59,6 +59,10 @@ export const Field = styled.input`
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 `
 
+export const CheckField = styled(Field)`
+    width: 3em;
+`
+
 export const LoginWrapper = styled.div`
     position: relative;
     display: flex;

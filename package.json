@@ -9,7 +9,7 @@
     "dev": "concurrently \"yarn run server\" \"yarn run client\"",
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
-    "heroku-postbuild": "YARN_PRODUCTION=false yarn --cwd frontend run && yarn --cwd frontend run build"
+    "heroku-postbuild": "YARN_PRODUCTION=false yarn --cwd frontend && yarn --cwd frontend run build"
   },
   "repository": "https://github.com/marcus-v-rodrigues/musicando.git",
   "author": "marcus-v-rodrigues <marcus.v.rodrigues@outlook.com>",

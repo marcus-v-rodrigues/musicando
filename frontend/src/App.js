@@ -23,6 +23,7 @@ import Products from './pages/Admin/subpages/Products'
 import Users from './pages/Admin/subpages/Users'
 import UserEdit from './pages/Admin/subpages/Users/UserEdit'
 import ProductEdit from './pages/Admin/subpages/Products/ProductEdit'
+import ProductCreate from './pages/Admin/subpages/Products/ProductCreate'
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
                     <Route path="/admin/users" component={ Users }/>
                     <Route path='/admin/user/:id/edit' component={UserEdit} />
                     <Route path='/admin/product/:id/edit' component={ProductEdit} />
+                    <Route path='/admin/product/create' component={ProductCreate} />
                     <Route path="/accessory" render={() => (<Category category={'Acessórios'} />)} />
                     <Route path="/audio" render={() => (<Category category={'Áudio'} />)} />
                     <Route path="/string" render={() => (<Category category={'Cordas'} />)} />

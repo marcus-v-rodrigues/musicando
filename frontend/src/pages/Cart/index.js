@@ -59,7 +59,7 @@ const Cart = ({ match, location, history }) => {
                     <S.SummaryItems>{totalItems} itens</S.SummaryItems>
                     <S.SummaryTotal>{locatedPrice}</S.SummaryTotal>
                 </S.SummaryInfo>
-                <Button onClick={() => alert('Função ainda não implementada')}>Comprar</Button>
+                <Button onClick={() => alert('Função não implementada')}>Comprar</Button>
             </S.Summary>
             
         </S.CartContainer>

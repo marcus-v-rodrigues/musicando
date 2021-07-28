@@ -27,14 +27,6 @@ const Products = ({ history, match }) => {
         success: successDelete,
     } = productDelete
 
-    const productCreate = useSelector((state) => state.productCreate)
-    const {
-        loading: loadingCreate,
-        error: errorCreate,
-        success: successCreate,
-        product: createdProduct,
-    } = productCreate
-
     const userLogin = useSelector((state) => state.userLogin)
     const { userInfo } = userLogin
 
@@ -45,29 +37,16 @@ const Products = ({ history, match }) => {
         history.push('/login')
         }
 
-        if (successCreate) {
-        history.push(`/admin/product/${createdProduct._id}/edit`)
-        } else {
-        dispatch(listProducts('', pageNumber))
-        }
     }, [
         dispatch,
         history,
-        userInfo,
-        successDelete,
-        successCreate,
-        createdProduct,
-        pageNumber,
+        userInfo
     ])
 
     const deleteHandler = (id) => {
         if (window.confirm('Tem certeza?')) {
         dispatch(deleteProduct(id))
         }
-    }
-
-    const createProductHandler = () => {
-        dispatch(createProduct())
     }
 
 
@@ -84,7 +63,7 @@ const Products = ({ history, match }) => {
 
                 <S.Panel>
                     <S.PanelTitle>Cadastrar novo produto</S.PanelTitle>
-                    <ButtonLink to={'/register'}>Cadastrar</ButtonLink>
+                    <ButtonLink to={`/admin/product/create`} >Cadastrar</ButtonLink>
                 </S.Panel>
             </S.Container>
         </PageContainer>

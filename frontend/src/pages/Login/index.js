@@ -49,6 +49,7 @@ const Login = ({ location, history }) => {
                             placeholder="email@dominio.com" 
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -63,6 +64,7 @@ const Login = ({ location, history }) => {
                             placeholder="Sua senha" 
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>

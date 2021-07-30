@@ -54,6 +54,7 @@ const Register = ({ location, history }) => {
                             placeholder="Seu nome" 
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -68,6 +69,7 @@ const Register = ({ location, history }) => {
                             placeholder="email@dominio.com" 
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -82,6 +84,7 @@ const Register = ({ location, history }) => {
                             placeholder="Sua senha" 
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -96,6 +99,7 @@ const Register = ({ location, history }) => {
                             placeholder="Sua senha" 
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>

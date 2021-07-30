@@ -65,6 +65,7 @@ const UserEdit = ({ match, history }) => {
                             placeholder="Seu nome" 
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -79,6 +80,7 @@ const UserEdit = ({ match, history }) => {
                             placeholder="email@dominio.com" 
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -93,6 +95,7 @@ const UserEdit = ({ match, history }) => {
                             label="É admin" 
                             checked={isAdmin}
                             onChange={(e) => setIsAdmin(e.target.checked)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>

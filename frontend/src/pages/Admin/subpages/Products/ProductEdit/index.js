@@ -108,6 +108,7 @@ const submitHandler = (e) => {
                             placeholder="Nome do produto" 
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -122,6 +123,7 @@ const submitHandler = (e) => {
                             placeholder="Preço do produto" 
                             value={price}
                             onChange={(e) => setPrice(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -136,6 +138,7 @@ const submitHandler = (e) => {
                             placeholder='Enter image url'
                             value={image}
                             onChange={(e) => setImage(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -150,6 +153,7 @@ const submitHandler = (e) => {
                             placeholder="Marca do produto" 
                             value={brand}
                             onChange={(e) => setBrand(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -179,6 +183,7 @@ const submitHandler = (e) => {
                             placeholder="Descrição do produto" 
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>
@@ -194,6 +199,7 @@ const submitHandler = (e) => {
                             value={countInStock}
                             min={0}
                             onChange={(e) => setCountInStock(e.target.value)}
+                            required
                         />
                         </S.Label>
                     </S.FormGroup>

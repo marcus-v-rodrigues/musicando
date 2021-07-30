@@ -34,16 +34,16 @@ The website design is still too simple. So, in future deliveries the idea is to 
 ## Site images:
 
 #### Main Page
-<img src="https://raw.githubusercontent.com/marcus-v-rodrigues/musicando/master/prototype/homepage.png" alt="Página principal" width="600"/>
+<img src="https://raw.githubusercontent.com/marcus-v-rodrigues/musicando/master/frontend/prototype/homepage.png" alt="Página principal" width="600"/>
 
 #### Shopping Cart Page
-<img src="https://raw.githubusercontent.com/marcus-v-rodrigues/musicando/master/prototype/cartpage.png" alt="Página Carrinho" width="600"/>
+<img src="https://raw.githubusercontent.com/marcus-v-rodrigues/musicando/master/frontend/prototype/cartpage.png" alt="Página Carrinho" width="600"/>
 
 #### Log In Page
-<img src="https://raw.githubusercontent.com/marcus-v-rodrigues/musicando/master/prototype/loginpage.png" alt="Página Log in" width="600"/>
+<img src="https://raw.githubusercontent.com/marcus-v-rodrigues/musicando/master/frontend/prototype/loginpage.png" alt="Página Log in" width="600"/>
 
 #### Navegation Diagram
-<img src="https://raw.githubusercontent.com/marcus-v-rodrigues/musicando/master/prototype/navigation_diagram.png" alt="Página Log in" width="600"/>
+<img src="https://raw.githubusercontent.com/marcus-v-rodrigues/musicando/master/frontend/prototype/navigation_diagram.png" alt="Página Log in" width="600"/>
 
 
 The complete prototype with navigation between pages is available [here](https://www.figma.com/file/CuKYvZKoZ1MMbLktkCf9Wh/Musicando?node-id=0%3A1)

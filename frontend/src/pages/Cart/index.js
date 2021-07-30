@@ -4,7 +4,7 @@ import PageContainer from '../../components/Layout/PageContainer'
 import CartItem from './CartItem'
 import * as S from './styled'
 
-import { addToCart } from '../../redux/actions/cartActions'
+import { addToCart, deleteCart } from '../../redux/actions/cartActions'
 import { useDispatch, useSelector } from 'react-redux'
 
 const Cart = ({ match, location, history }) => {
@@ -59,7 +59,7 @@ const Cart = ({ match, location, history }) => {
                     <S.SummaryItems>{totalItems} itens</S.SummaryItems>
                     <S.SummaryTotal>{locatedPrice}</S.SummaryTotal>
                 </S.SummaryInfo>
-                <Button onClick={() => alert('Função não implementada')}>Comprar</Button>
+                <Button onClick={() =>{dispatch(deleteCart()); alert('Compra realizada')}}>Comprar</Button>
             </S.Summary>
             
         </S.CartContainer>

@@ -148,3 +148,6 @@ export const Link = styled(NavLink)`
 	}
 
 `
+
+export const Button = styled(Link).attrs({as: "button"})`
+`

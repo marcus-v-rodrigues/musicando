@@ -95,7 +95,6 @@ const UserEdit = ({ match, history }) => {
                             label="É admin" 
                             checked={isAdmin}
                             onChange={(e) => setIsAdmin(e.target.checked)}
-                            required
                         />
                         </S.Label>
                     </S.FormGroup>

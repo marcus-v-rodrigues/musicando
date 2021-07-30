@@ -54,7 +54,7 @@ const submitHandler = (e) => {
 
     return (
         <PageContainer>
-            <S.Title>Editar</S.Title>
+            <S.Title>Criar</S.Title>
             {error && <Alert>{error}</Alert>}
                 <S.FormContainer name='form' onSubmit={submitHandler}>
 
@@ -104,9 +104,9 @@ const submitHandler = (e) => {
 
                     <S.FormGroup>
                         <S.Label htmlFor="brand">
-                            Nome
+                            Marca
                         <S.Field 
-                            type="name" 
+                            type="text" 
                             name="brand" 
                             id="brand"  
                             placeholder="Marca do produto" 
@@ -164,7 +164,7 @@ const submitHandler = (e) => {
                     </S.FormGroup>
 
                     <S.LoginWrapper>
-                        <S.Button type='submit'>Editar</S.Button>
+                        <S.Button type='submit'>Criar</S.Button>
                     </S.LoginWrapper>
 
                 </S.FormContainer>

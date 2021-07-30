@@ -31,6 +31,16 @@ const Products = ({ history, match }) => {
     const { userInfo } = userLogin
 
     useEffect(() => {
+        if (!userInfo || !userInfo.isAdmin) {
+            history.push('/')
+        }
+    }, [userInfo, history])
+
+    useEffect(() => {
+        dispatch(listProducts())
+    }, [dispatch, loadingDelete])
+
+    useEffect(() => {
         dispatch({ type: PRODUCT_CREATE_RESET })
 
         if (!userInfo || !userInfo.isAdmin) {
@@ -45,7 +55,7 @@ const Products = ({ history, match }) => {
 
     const deleteHandler = (id) => {
         if (window.confirm('Tem certeza?')) {
-        dispatch(deleteProduct(id))
+            dispatch(deleteProduct(id))
         }
     }
 
@@ -56,7 +66,7 @@ const Products = ({ history, match }) => {
             {error && <Alert>{error}</Alert>}
             <S.Container>
                 <S.Wrapper>
-                    {products && products.map((product) => (
+                    {!loading && products && products.map((product) => (
                         <ProductsItem onDelete={() => deleteHandler(product._id)} key={product._id} product={product} />
                     ))}
                 </S.Wrapper>

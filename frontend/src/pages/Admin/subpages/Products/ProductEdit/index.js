@@ -145,9 +145,9 @@ const submitHandler = (e) => {
 
                     <S.FormGroup>
                         <S.Label htmlFor="brand">
-                            Nome
+                            Marca
                         <S.Field 
-                            type="name" 
+                            type="text" 
                             name="brand" 
                             id="brand"  
                             placeholder="Marca do produto" 

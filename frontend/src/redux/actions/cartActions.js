@@ -33,7 +33,7 @@ export const deleteCart = () => (dispatch, getState) => {
     type: cart.CART_CLEAR_ITEMS,
   })
 
-  localStorage.setItem('cartItems', JSON.stringify(getState().cart.cartItems))
+  localStorage.removeItem('cartItems')
 }
 
 export const saveShippingAddress = (data) => (dispatch) => {

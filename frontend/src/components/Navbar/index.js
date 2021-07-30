@@ -55,12 +55,12 @@ const Navbar = () => {
               <>
                 {userInfo.isAdmin ? (
                   <>
-                    <S.AdminLink to='/admin'>{userInfo.name}</S.AdminLink>
+                    <S.AdminLink to='/admin'>{userInfo.name.split(" ")[0]}</S.AdminLink>
                     <Button onClick={logoutHandler}>Logout</Button>
                   </>
                 ) : (
                   <>
-                    <S.NameUser>{userInfo.name}</S.NameUser>
+                    <S.NameUser>{userInfo.name.split(" ")[0]}</S.NameUser>
                     <Button onClick={logoutHandler}>Logout</Button>
                   </>
                 )}

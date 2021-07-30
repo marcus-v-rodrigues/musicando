@@ -4,6 +4,9 @@ import gsap from 'gsap'
 import * as S from './styled'
 import links from '../links'
 
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from 'redux/actions/userActions'
+
 const HamburgerMenu = ({ className }) => {
     
     let sidebar = useRef(null)
@@ -80,6 +83,15 @@ const HamburgerMenu = ({ className }) => {
         menuExpanded === true ? timeline.current.play() : timeline.current.reverse()
     },[menuExpanded])   
 
+    const dispatch = useDispatch()
+
+    const userLogin = useSelector((state) => state.userLogin)
+    const { userInfo } = userLogin
+
+    const logoutHandler = () => {
+        dispatch(logout())
+    }
+
     return (
         <S.Wrapper className={className}> {/*Using styled(Component) creates a class which is passed as a prop called className to the wrapped component.*/}
             <S.HamburgerContainer onClick={() => setMenuExpanded(!menuExpanded)}>
@@ -97,9 +109,24 @@ const HamburgerMenu = ({ className }) => {
                             </S.Item>
                         ))}
 
-                        <S.Item ref={addToMenuItems}>
-                            <S.Link to={'/login'} onClick={() => setMenuExpanded(!menuExpanded)}>Entrar</S.Link>
-                        </S.Item>
+                        {userInfo ? (              
+                            <S.Item ref={addToMenuItems}>
+                                <S.Button onClick={() => {logoutHandler(); setMenuExpanded(!menuExpanded)}}>Logout</S.Button>
+                            </S.Item> 
+                        ) : (
+                            <S.Item ref={addToMenuItems}>
+                                <S.Link to={'/login'} onClick={() => setMenuExpanded(!menuExpanded)}>Entrar</S.Link>
+                            </S.Item>
+                        )}
+
+                        {userInfo && userInfo.isAdmin &&
+                            (
+                                <S.Item ref={addToMenuItems}>
+                                    <S.Link to={'/admin'} onClick={() => setMenuExpanded(!menuExpanded)}>Admin</S.Link>
+                                </S.Item>
+                            )
+                        }
+                        
                 </S.List>
             </S.Sidebar>
         </S.Wrapper>

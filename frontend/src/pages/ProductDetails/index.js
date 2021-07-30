@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import PageContainer from '../../components/Layout/PageContainer'
 import { Button } from '../../components/Button'
+import Rating from '../../components/Rating'
 
 // Redux
 import { useDispatch, useSelector } from 'react-redux'
@@ -48,6 +49,8 @@ const ProductDetails = ({ history, match }) => {
                       <S.ProductName>{product.name}</S.ProductName>
                       <S.ProductPrice>{price}</S.ProductPrice>
                       <S.ProductDescription>{product.description}</S.ProductDescription>
+                      <Rating value={product.rating}/>
+
                       <S.ActionWrapper>
 
                         {product.countInStock > 0 && (
@@ -65,6 +68,7 @@ const ProductDetails = ({ history, match }) => {
                         <S.ProductStock>{product.countInStock > 0 ? 'Em estoque' : 'Fora de estoque'}</S.ProductStock>
 
                       </S.ActionWrapper>
+
                       <Button 
                         onClick={addToCartHandler}
                         disabled={product.countInStock === 0}

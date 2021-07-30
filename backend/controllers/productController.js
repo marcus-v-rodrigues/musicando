@@ -71,11 +71,12 @@ const deleteProduct = asyncHandler(async (req, res) => {
 // @access  Private/Admin
 const createProduct = asyncHandler(async (req, res) => {
 
-  const { name, price, user, image, brand, category, countInStock, numReviews, description } = req.body
+  const { name, price, rating, user, image, brand, category, countInStock, numReviews, description } = req.body
 
   const product = await Product.create({
     name, 
-    price, 
+    price,
+    rating, 
     user, 
     image, 
     brand, 
@@ -96,6 +97,7 @@ const updateProduct = asyncHandler(async (req, res) => {
   const {
     name,
     price,
+    rating,
     description,
     image,
     brand,
@@ -108,6 +110,7 @@ const updateProduct = asyncHandler(async (req, res) => {
   if (product) {
     product.name = name
     product.price = price
+    product.rating = rating
     product.description = description
     product.image = image
     product.brand = brand

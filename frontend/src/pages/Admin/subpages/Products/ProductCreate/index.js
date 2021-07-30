@@ -12,6 +12,7 @@ const productId = match.params.id
 
 const [name, setName] = useState('')
 const [price, setPrice] = useState(0)
+const [rating, setRating] = useState(0)
 const [image, setImage] = useState('')
 const [brand, setBrand] = useState('')
 const [category, setCategory] = useState('')
@@ -43,6 +44,7 @@ const submitHandler = (e) => {
       user: userInfo._id,
       name,
       price,
+      rating,
       image,
       brand,
       category,
@@ -84,6 +86,22 @@ const submitHandler = (e) => {
                             value={price}
                             onChange={(e) => setPrice(e.target.value)}
                             required
+                        />
+                        </S.Label>
+                    </S.FormGroup>
+
+                    <S.FormGroup>
+                        <S.Label htmlFor="rating">
+                            Avaliação
+                        <S.Field 
+                            type="number" 
+                            name="rating" 
+                            id="rating"  
+                            placeholder="Avaliação do produto" 
+                            value={rating}
+                            min={0}
+                            max={10}
+                            onChange={(e) => setRating(e.target.value)}
                         />
                         </S.Label>
                     </S.FormGroup>
